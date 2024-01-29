@@ -1,0 +1,61 @@
+We need to change the password in current lab user  and put it in one env it will be anything and stop other two lab envs (because we use same pass for all lab env now we changing that so we going to put the new pass in only env because it is working or not). We need to change the pass in cpr configuration in portainer after a day we going to change them in prod . And change the current tusass pass in portal .
+
+
+
+we need to change the date in alrarm icinga in /home/icinga
+
+PROD 
+
+
+select * from cprservice.cpr_registry cr where pnr= '1511066758';
+
+
+INSERT INTO cprservice.cpr_registry
+(pnr, addressing_name, building_no, co_name, date_of_birth, description, during_duardianship_date, existing_pnr, expiry_date, first_and_middle_name, floor, house_no, municipality_code, name_addressprotection, occupation, post_code, postal_district, relocation_date, road_code, sex, side_door_no, street_address_name, subscribe, subscription_date, subscription_status, surname)
+VALUES('1511066758', 'Iluuna Ane Louise Albrechtsen', NULL, '', '20061115', 'Success', NULL, '1511066758', '2024-02-24', 'Iluuna Ane Louise', '', '006', '0956', NULL, NULL, '3905', 'Nuussuaq', NULL, '0291', 'K', '0301', 'Seernaq', false, NULL, 'NEW', 'Albrechtsen');
+
+DELETE FROM cprservice.cpr_registry
+WHERE pnr='1511066758';
+
+
+
+NOTE: The one-time password must be changed within 7 days, as the userid otherwise will become inactive. The password must then be changed every 90 days, as the userid otherwise becomes inactive - it is recommended to change it every two months.
+Password can be changed in the DAP system:
+PROD: https://gws.cpr.dk/cpr-online-gws
+You need to stop CPR service when you do a GCTP user reset.
+Do not stop wrong. A third attempt will make the user inactive.
+Only once can you do a password reset within a 24-hour time frame.
+
+ 
+In the lab, stop the 3 environment cpr service and do the reset.
+Then, in the configuration, add a password and start the service.
+
+
+MSIT
+
+select * from cprservice.cpr_registry cr where pnr ='2606852765';
+
+
+INSERT INTO cprservice.cpr_registry
+(pnr, addressing_name, building_no, co_name, date_of_birth, description, during_duardianship_date, existing_pnr, expiry_date, first_and_middle_name, floor, house_no, municipality_code, name_addressprotection, occupation, post_code, postal_district, relocation_date, road_code, sex, side_door_no, street_address_name, subscribe, subscription_date, subscription_status, surname)
+VALUES('2606852765', 'Martin Sørensen', NULL, '', '19850626', 'Success', NULL, '2606852765', '2023-11-22', 'Martin', '', '', '0960', NULL, NULL, '3961', 'Uummannaq', NULL, '0184', 'M', '', 'Maniillat Qaqqaat', false, NULL, 'NEW', 'Sørensen');
+
+
+
+
+DELETE FROM cprservice.cpr_registry
+WHERE pnr='2606852765';
+
+
+PROJECT
+
+select * from cprproject.cpr_registry cr where pnr='1204622694';
+
+
+INSERT INTO cprproject.cpr_registry
+(pnr, addressing_name, building_no, co_name, date_of_birth, description, during_duardianship_date, existing_pnr, expiry_date, first_and_middle_name, floor, house_no, municipality_code, name_addressprotection, occupation, post_code, postal_district, relocation_date, road_code, sex, side_door_no, street_address_name, subscribe, subscription_date, subscription_status, surname)
+VALUES('1204622694', 'Pipaluk Mathiassen Kruse', NULL, '', '19620412', 'Success', NULL, '1204622694', '2023-12-14', 'Pipaluk Mathiassen', '', '', '0960', NULL, NULL, '3961', 'Uummannaq', NULL, '0089', 'K', '', 'Igaasarissat Aqqutaa', false, NULL, 'NEW', 'Kruse');
+
+
+DELETE FROM cprproject.cpr_registry
+WHERE pnr='1204622694'

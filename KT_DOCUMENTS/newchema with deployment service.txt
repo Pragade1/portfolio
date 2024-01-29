@@ -1,0 +1,28 @@
+Need to create user in DB which under the db
+
+
+Create a db with under te userame name
+
+
+create the schema whoich ever needs
+
+
+add them in the portainer
+
+
+rm service
+
+
+add the config wih correct name in portainer
+
+
+
+if we added any host new in portainer add them in ymal
+
+
+
+deploy the service
+ 
+ 
+ 
+

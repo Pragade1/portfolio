@@ -1,0 +1,2465 @@
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.2 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to root@10.60.255.40                                   │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Last login: Thu Oct 19 18:26:52 2023 from 10.60.23.185
+[root@lnaknuk7 ~]# /home/icinga/PROD_CoAService_Status.sh
+-bash: /home/icinga/PROD_CoAService_Status.sh: No such file or directory
+[root@lnaknuk7 ~]# cat /home/icinga/PROD_CoAService_Status.sh
+cat: /home/icinga/PROD_CoAService_Status.sh: No such file or directory
+[root@lnaknuk7 ~]# su icinga
+bash-4.1$ pwd
+/root
+bash-4.1$ ssh 172.30.8.39
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-87-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Oct 19 09:23:21 PM UTC 2023
+
+  System load:  0.0                Processes:               200
+  Usage of /:   62.5% of 19.51GB   Users logged in:         0
+  Memory usage: 8%                 IPv4 address for ens160: 172.30.8.39
+  Swap usage:   0%                 IPv4 address for ens192: 172.30.7.224
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon Aug  7 06:55:49 2023 from 10.60.255.40
+$ bash
+icinga@pe-bridge:~$ su devops
+su: user devops does not exist or the user entry does not contain all the required fields
+icinga@pe-bridge:~$ cd /home/
+icinga@pe-bridge:/home$ ls -ltr
+total 12
+drwxr-xr-x 5 chris   chris   4096 Mar  4  2019 chris
+drwxr-xr-x 5 esbuser esbuser 4096 Jun 18  2022 esbuser
+drwxr-xr-x 4 icinga  icinga  4096 Aug  4  2022 icinga
+icinga@pe-bridge:/home$ uptime
+ 21:23:51 up  3:34,  1 user,  load average: 0.00, 0.00, 0.00
+icinga@pe-bridge:/home$ history
+    1  ls -ltr
+    2  cat PROD_CoAService_Status.sh
+    3  sudo -S etc/init.d/CoAServicePROD status
+    4  cd ~
+    5  ls -ltra
+    6  cd .ssh
+    7  ls -ltr
+    8  ssh-keygen
+    9  cat id
+   10  ls -ltr
+   11  cat yes.pub
+   12  vi authorized_keys
+   13  sudo -S etc/init.d/CoAServicePROD status
+   14  exit
+   15  sudo -s etc/init.d/CoAServicePROD status
+   16  exit
+   17  sudo -s etc/init.d/CoAServicePROD status
+   18  exit
+   19  /etc/inid.d/CoAServicePROD status
+   20  /etc/init.d/CoAServicePROD status
+   21  sudo -s/etc/init.d/CoAServicePROD status
+   22  sudo -s /etc/init.d/CoAServicePROD status
+   23  sudo -S /etc/init.d/CoAServicePROD status
+   24  ci PROD_CoAService_Status.sh
+   25  vi PROD_CoAService_Status.sh
+   26  sh -x ./PROD_CoAService_Status.sh
+   27  sudo -S etc/init.d/CoAServicePROD status
+   28  sudo -s etc/init.d/CoAServicePROD status
+   29  sudo -S etc/init.d/CoAServicePROD status
+   30  exit
+   31  ./PROD_CoAService_Status.sh
+   32  sh -x PROD_CoAService_Status.sh
+   33  sudo -S etc/init.d/CoAServicePROD status
+   34  sudo -S /etc/init.d/CoAServicePROD status
+   35  vi PROD_CoAService_Status.sh
+   36  sh -x PROD_CoAService_Status.sh
+   37  sudo -i
+   38  ls -ltr
+   39  sudo -i
+   40  ls -ltr
+   41  sudo -i
+   42  exit
+   43  sudo -i
+   44  sudo -i
+   45  sudo i
+   46  sudo -i
+   47  ls
+   48  cd /root/
+   49  ls
+   50  cd /root/
+   51  clear
+   52  sudo -i
+   53  cd /rad
+   54  cd rad
+   55  cd ../
+   56  cd /rad
+   57  cd /root
+   58  sudo -i
+   59  ls -ltr
+   60  sudo -i
+   61  clear
+   62  sudo -i
+   63  clear
+   64  ls -ltr
+   65  sudo -i
+   66  ls -ltr
+   67  cat PROD_CoAService_Status.sh
+   68  cat CoAService_Status.sh
+   69  exit
+   70  ps -ef | grep -i java
+   71  ls -ltr
+   72  cat PROD_CoAService_Status.sh
+   73  df -kh
+   74  cd /etc/init.d/
+   75  ls -ltr
+   76  ./CoAService status
+   77  sudo -i
+   78  su devops
+   79  cd /home/
+   80  ls -ltr
+   81  uptime
+   82  history
+icinga@pe-bridge:/home$ cat PROD_CoAService_Status.sh
+cat: PROD_CoAService_Status.sh: No such file or directory
+icinga@pe-bridge:/home$ cd /etc/init.d/
+icinga@pe-bridge:/etc/init.d$ ls -ltr
+total 140
+-rwxr-xr-x 1 root root 1071 Aug 21  2015 atd
+-rwxr-xr-x 1 root root 2269 Apr 22  2017 acpid
+-rwxr-xr-x 1 root root 1222 May 21  2017 screen-cleanup
+-rwxr-xr-x 1 root root 2083 Aug 15  2017 ufw
+-rwxr-xr-x 1 root root 2044 Aug 15  2017 kmod
+-rwxr-xr-x 1 root root  586 Dec  3  2017 lvm2-lvmpolld
+-rwxr-xr-x 1 root root  695 Dec  3  2017 lvm2
+-rwxr-xr-x 1 root root 1479 Feb 15  2018 keyboard-setup.sh
+-rwxr-xr-x 1 root root 1503 Feb 21  2018 iscsid
+-rwxr-xr-x 1 root root  985 Mar  4  2018 grub-common
+-rwxr-xr-x 1 root root 1306 Mar 15  2018 uuidd
+-rwxr-xr-x 1 root root 1846 Mar 22  2018 open-vm-tools
+-rwxr-xr-x 1 root root 1391 Apr 17  2018 unattended-upgrades
+-rwxr-xr-x 1 root root 1232 Apr 19  2018 console-setup.sh
+-rwxr-xr-x 1 root root 3152 Sep 30  2019 dbus
+-rwxr-xr-x 1 root root 4417 Oct 15  2019 rsync
+-rwxr-xr-x 1 root root 2638 Dec 13  2019 irqbalance
+-rwxr-xr-x 1 root root 2827 Jan  9  2020 multipath-tools
+-rwxr-xr-x 1 root root 2063 Jan 23  2020 nagios-nrpe-server
+-rwxr-xr-x 1 root root  896 Feb  4  2020 cryptdisks-early
+-rwxr-xr-x 1 root root  937 Feb  4  2020 cryptdisks
+-rwxr-xr-x 1 root root 3740 Apr  1  2020 apparmor
+-rwxr-xr-x 1 root root 2498 Apr 17  2020 lxcfs
+lrwxrwxrwx 1 root root   34 Jun 18  2020 DSLService -> /root/DSLService/DSLService-33.jar
+-rwxr-xr-x 1 root root 3062 Mar 17  2021 cron
+-rwxr-xr-x 1 root root 2762 Oct 19  2021 x11-common
+-rwxr-xr-x 1 root root 2433 Jan 19  2022 open-iscsi
+-rwxr-xr-x 1 root root 1748 Feb 20  2022 hwclock.sh
+-rwxr-xr-x 1 root root 1386 Feb 23  2022 plymouth
+-rwxr-xr-x 1 root root  760 Feb 23  2022 plymouth-log
+-rwxr-xr-x 1 root root  959 Feb 25  2022 procps
+-rwxr-xr-x 1 root root 2915 May 10  2022 apport
+lrwxrwxrwx 1 root root   38 Aug  4  2022 CoAServiceProd -> /root/CoAServicePROD/CoAService-12.jar
+lrwxrwxrwx 1 root root   34 Aug  8  2022 CoAService -> /root/CoAService/CoAService-14.jar
+-rwxr-xr-x 1 root root 4060 Nov 15  2022 ssh
+-rwxr-xr-x 1 root root 6871 Mar 20  2023 udev
+icinga@pe-bridge:/etc/init.d$ sudo -S etc/init.d/CoAServicePROD status
+sudo: etc/init.d/CoAServicePROD: command not found
+icinga@pe-bridge:/etc/init.d$ sudo -i
+root@pe-bridge:~# sudo -S etc/init.d/CoAServicePROD status
+sudo: etc/init.d/CoAServicePROD: command not found
+root@pe-bridge:~# ps -ef | grep -i java
+root        6479    6467  0 21:26 pts/0    00:00:00 grep --color=auto -i java
+root@pe-bridge:~# uptime
+ 21:26:43 up  3:37,  1 user,  load average: 0.00, 0.00, 0.00
+root@pe-bridge:~# cd /etc/init.d/
+root@pe-bridge:/etc/init.d# ls -ltr
+total 140
+-rwxr-xr-x 1 root root 1071 Aug 21  2015 atd
+-rwxr-xr-x 1 root root 2269 Apr 22  2017 acpid
+-rwxr-xr-x 1 root root 1222 May 21  2017 screen-cleanup
+-rwxr-xr-x 1 root root 2083 Aug 15  2017 ufw
+-rwxr-xr-x 1 root root 2044 Aug 15  2017 kmod
+-rwxr-xr-x 1 root root  586 Dec  3  2017 lvm2-lvmpolld
+-rwxr-xr-x 1 root root  695 Dec  3  2017 lvm2
+-rwxr-xr-x 1 root root 1479 Feb 15  2018 keyboard-setup.sh
+-rwxr-xr-x 1 root root 1503 Feb 21  2018 iscsid
+-rwxr-xr-x 1 root root  985 Mar  4  2018 grub-common
+-rwxr-xr-x 1 root root 1306 Mar 15  2018 uuidd
+-rwxr-xr-x 1 root root 1846 Mar 22  2018 open-vm-tools
+-rwxr-xr-x 1 root root 1391 Apr 17  2018 unattended-upgrades
+-rwxr-xr-x 1 root root 1232 Apr 19  2018 console-setup.sh
+-rwxr-xr-x 1 root root 3152 Sep 30  2019 dbus
+-rwxr-xr-x 1 root root 4417 Oct 15  2019 rsync
+-rwxr-xr-x 1 root root 2638 Dec 13  2019 irqbalance
+-rwxr-xr-x 1 root root 2827 Jan  9  2020 multipath-tools
+-rwxr-xr-x 1 root root 2063 Jan 23  2020 nagios-nrpe-server
+-rwxr-xr-x 1 root root  896 Feb  4  2020 cryptdisks-early
+-rwxr-xr-x 1 root root  937 Feb  4  2020 cryptdisks
+-rwxr-xr-x 1 root root 3740 Apr  1  2020 apparmor
+-rwxr-xr-x 1 root root 2498 Apr 17  2020 lxcfs
+lrwxrwxrwx 1 root root   34 Jun 18  2020 DSLService -> /root/DSLService/DSLService-33.jar
+-rwxr-xr-x 1 root root 3062 Mar 17  2021 cron
+-rwxr-xr-x 1 root root 2762 Oct 19  2021 x11-common
+-rwxr-xr-x 1 root root 2433 Jan 19  2022 open-iscsi
+-rwxr-xr-x 1 root root 1748 Feb 20  2022 hwclock.sh
+-rwxr-xr-x 1 root root 1386 Feb 23  2022 plymouth
+-rwxr-xr-x 1 root root  760 Feb 23  2022 plymouth-log
+-rwxr-xr-x 1 root root  959 Feb 25  2022 procps
+-rwxr-xr-x 1 root root 2915 May 10  2022 apport
+lrwxrwxrwx 1 root root   38 Aug  4  2022 CoAServiceProd -> /root/CoAServicePROD/CoAService-12.jar
+lrwxrwxrwx 1 root root   34 Aug  8  2022 CoAService -> /root/CoAService/CoAService-14.jar
+-rwxr-xr-x 1 root root 4060 Nov 15  2022 ssh
+-rwxr-xr-x 1 root root 6871 Mar 20  2023 udev
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Not running
+root@pe-bridge:/etc/init.d# history
+ 1007  tail -f rest.log
+ 1008  tail -f application.log
+ 1009  tail -f rest.log
+ 1010  tail -f application.log
+ 1011  tail -f rest.log
+ 1012  tail -f application.log
+ 1013  clear
+ 1014  cd /root/builds/
+ 1015  ls -ltr
+ 1016  mkdir 12
+ 1017  cd 12
+ 1018  ls -ltr
+ 1019  cd /root/CoAService
+ 1020  ls -ltr
+ 1021  mv CoAService-10.conf CoAService-12.conf
+ 1022  ls -ltr
+ 1023  rm -rf CoAService-10.jar
+ 1024  cd /etc/init.d/
+ 1025  ls -ltr
+ 1026  rm -rf CoAService
+ 1027  cd /root/CoAService
+ 1028  ls -ltr
+ 1029  cd /root/builds/12/
+ 1030  ls -ltr
+ 1031  cp CoAService-12.jar /root/CoAService
+ 1032  cp log4j2-spring.xml /root/CoAService
+ 1033  cd /root/CoAService
+ 1034  ls -ltr
+ 1035  history | grep ln
+ 1036  sudo ln -s /root/CoAService/CoAService-12.jar /etc/init.d/CoAService
+ 1037  cd /etc/init.d/
+ 1038  ls -ltr
+ 1039  ./CoAService restart
+ 1040  cd /root/CoAService
+ 1041  cd log/
+ 1042  tail -f application.log
+ 1043  cat ../application.properties
+ 1044  tail -f application.log
+ 1045  clear
+ 1046  tail -f application.log
+ 1047  tail -f rest.log
+ 1048  ls -ltr
+ 1049  cat ../application.properties
+ 1050  tail -f application.log
+ 1051  tail -f rest.log
+ 1052  tail -f application.log
+ 1053  tail -f rest.log
+ 1054  tail -f application.log
+ 1055  view application.log
+ 1056  cd ..
+ 1057  vi application.properties
+ 1058  cat /root/CoAServicePROD/application.properties
+ 1059  vi application.properties
+ 1060  cd /etc/init.d/
+ 1061  ls -ltr
+ 1062  ./CoAService restart
+ 1063  cd /root/CoAService/log/
+ 1064  tail -f application.log
+ 1065  cd ..
+ 1066  ls -ltr
+ 1067  cat application.properties
+ 1068  cat /root/CoAServicePROD/application.properties
+ 1069  cd scripts/
+ 1070  ls -ltr
+ 1071  view pod_dsldiag_new_radius.py
+ 1072  exit
+ 1073  clear
+ 1074  ls -ltr
+ 1075  cd CoAServicePROD/
+ 1076  ls -ltr
+ 1077  cd ..
+ 1078  ls -ltr
+ 1079  cd CoAService
+ 1080  ls -ltr
+ 1081  cat application.properties
+ 1082  ls -ltr
+ 1083  cp CoAService-12.jar /root/CoAServicePROD/
+ 1084  cp log4j2-spring.xml /root/CoAServicePROD/
+ 1085  cd /root/CoAServicePROD/
+ 1086  ls -ltr
+ 1087  cd /etc/init.d/
+ 1088  ls -ltr
+ 1089  rm -rf CoAServicePROD
+ 1090  cd /root/CoAServicePROD/
+ 1091  ls -ltr
+ 1092  mv CoAService-4.conf CoAService-12.conf
+ 1093  ls -ltr
+ 1094  mv CoAService-4.jar /root/builds/
+ 1095  ls -ltr
+ 1096  history | grep ln
+ 1097  sudo ln -s /root/CoAServicePROD/CoAService-12.jar /etc/init.d/CoAServiceProd
+ 1098  cd /etc/init.d/
+ 1099  ls -ltr
+ 1100  ./CoAServiceProd status
+ 1101  ./CoAServiceProd start
+ 1102  cd /root/CoAServicePROD/
+ 1103  cd log/
+ 1104  tail -f application.log
+ 1105  cd /etc/init.d/
+ 1106  ./CoAServiceProd restart
+ 1107  cd /root/CoAServicePROD/log/
+ 1108  tail -f application.log
+ 1109  ls -ltr
+ 1110  tail -f spring-stdout.log
+ 1111  cd ..
+ 1112  ls -ltr
+ 1113  cat application.properties
+ 1114  cd log
+ 1115  ls -ltr
+ 1116  view spring-stdout.log
+ 1117  ls -ltr
+ 1118  cd ..
+ 1119  ls -ltr
+ 1120  cat CoAService-12.conf
+ 1121  ls -ltr
+ 1122  cd log/
+ 1123  ls -ltr
+ 1124  cd /etc/init.d/
+ 1125  ls -ltr
+ 1126  ./CoAServiceProd status
+ 1127  ./CoAServiceProd start
+ 1128  tail -f /root/CoAServicePROD/log/application.log
+ 1129  tail -f /root/CoAServicePROD/log/spring-stdout.log
+ 1130  cd /root/CoAService
+ 1131  cd /root/CoAServicePROD/
+ 1132  ls -ltr
+ 1133  cat /root/CoAService
+ 1134  ls -ltr /root/CoAService
+ 1135  ls -ltr
+ 1136  cat CoAService-12.conf
+ 1137  cd ..
+ 1138  cd CoAServicePROD/
+ 1139  ls -ltr
+ 1140  cd log
+ 1141  ls -ltr
+ 1142  date
+ 1143  view spring-stdout.log
+ 1144  ls -ltr
+ 1145  cd ..
+ 1146  ls -ltr
+ 1147  cat CoAService-12.conf
+ 1148  cd /root/CoAService
+ 1149  ls -ltr
+ 1150  cat CoAService-12.conf
+ 1151  netstat -anp | grep 9090
+ 1152  ps -ef | grep 18389
+ 1153  cd /root/CoAService
+ 1154  cd /root/CoAServicePROD/
+ 1155  ls -ltr
+ 1156  history | grep CoAServicePROD
+ 1157  ls -ltr
+ 1158  ps -ef | grep 18389
+ 1159  kill -9 18389
+ 1160  cd /etc/init.d/
+ 1161  ls -ltr
+ 1162  ./CoAServiceProd status
+ 1163  ./CoAServiceProd start
+ 1164  tail -f /root/CoAServicePROD/log
+ 1165  tail -f /root/CoAServicePROD/log/application.log
+ 1166  cd /root/CoAServicePROD/
+ 1167  ls -ltr
+ 1168  cat application.properties
+ 1169  cd log/
+ 1170  tail -f application.log
+ 1171  tail -f rest.log
+ 1172  ps -ef | grep -i java
+ 1173  tail -f application.log
+ 1174  ls -ltr
+ 1175  cd ..
+ 1176  ls -ltr
+ 1177  clear
+ 1178  ps -ef | grep -i java
+ 1179  ls -ltr
+ 1180  cd CoAServicePROD/
+ 1181  cd log
+ 1182  ls -ltr
+ 1183  tail -f application.log
+ 1184  ls -ltr
+ 1185  date
+ 1186  tail -f spring-stdout.log
+ 1187  ls -ltr
+ 1188  cd ..
+ 1189  ls -ltr
+ 1190  cd ..
+ 1191  cd CoAService
+ 1192  cd log
+ 1193  ls -ltr
+ 1194  tail -f application.log
+ 1195  date
+ 1196  ls -ltr
+ 1197  cd ..
+ 1198  ls -ltr
+ 1199  cd /home/icinga/
+ 1200  ls -ltr
+ 1201  cat PROD_CoAService_Status.sh
+ 1202  sudo -S /etc/init.d/CoAServicePROD status
+ 1203  cat CoAService_Status.sh
+ 1204  service CoAService status
+ 1205  cd /etc/init.d/
+ 1206  ls -ltr
+ 1207  ./CoAService status
+ 1208  ./CoAServiceProd status
+ 1209  cd /home/icinga/
+ 1210  ls -ltr
+ 1211  vi CoAService_Status.sh
+ 1212  ls -ltr
+ 1213  sh -x ./CoAService_Status.sh
+ 1214  vi CoAService_Status.sh
+ 1215  sh -x ./CoAService_Status.sh
+ 1216  vi CoAService_Status.sh
+ 1217  sh -x ./CoAService_Status.sh
+ 1218  vi CoAService_Status.sh
+ 1219  sh -x ./CoAService_Status.sh
+ 1220  vi CoAService_Status.sh
+ 1221  sh -x ./CoAService_Status.sh
+ 1222  vi CoAService_Status.sh
+ 1223  sh -x ./CoAService_Status.sh
+ 1224  vi CoAService_Status.sh
+ 1225  cd /etc/init.d/
+ 1226  sudo ./CoAService status | grep "active (running)" | wc -l
+ 1227  sudo ./CoAService status | grep "active (running)"
+ 1228  sudo ./CoAService status
+ 1229  sudo ./CoAService status | grep "Running" | wc -l
+ 1230  cd /home/icinga/
+ 1231  vi CoAService_Status.sh
+ 1232  sh -x ./CoAService_Status.sh
+ 1233  vi CoAService_Status.sh
+ 1234  sh -x ./CoAService_Status.sh
+ 1235  vi CoAService_Status.sh
+ 1236  ls -ltr
+ 1237  cat PROD_CoAService_Status.sh
+ 1238  ps -ef | grep -i java
+ 1239  ls -ltr
+ 1240  cat PROD_CoAService_Status.sh
+ 1241  clear
+ 1242  ls -ltr
+ 1243  cat CoAService_Status.sh
+ 1244  vi CoAService_Status.sh
+ 1245  sh -x ./CoAService_Status.sh
+ 1246  vi CoAService_Status.sh
+ 1247  sh -x ./CoAService_Status.sh
+ 1248  vi CoAService_Status.sh
+ 1249  ls -ltr
+ 1250  cat PROD_CoAService_Status.sh
+ 1251  vi PROD_CoAService_Status.sh
+ 1252  cd /etc/init.d/
+ 1253  ls -ltr
+ 1254  ./CoAServiceProd status
+ 1255  cd /home/icinga/
+ 1256  vi PROD_CoAService_Status.sh
+ 1257  sh -x ./PROD_CoAService_Status.sh
+ 1258  cd /root/CoAServicePROD/
+ 1259  ls -ltr
+ 1260  cd log
+ 1261  tail -f application.log
+ 1262  grep "Error" application.log
+ 1263  ls -ltr
+ 1264  grep "Error" application.2022-08-04-05.log
+ 1265  grep "Error" application.log
+ 1266  view application.log
+ 1267  ls
+ 1268  cd CoAServicePROD/
+ 1269  ls
+ 1270  cd log
+ 1271  view application.log
+ 1272  view rest.log
+ 1273  view application.log
+ 1274  cd ../
+ 1275  cd CoAService
+ 1276  ls
+ 1277  ls -ltr
+ 1278  cd ../
+ 1279  cd CoAServicePROD/
+ 1280  ls
+ 1281  cd log
+ 1282  view application.log
+ 1283  tail -f application.log
+ 1284  view application.log
+ 1285  cd CoAServicePROD/
+ 1286  ls
+ 1287  cd log
+ 1288  view application.log
+ 1289  view rest.log
+ 1290  view application.log
+ 1291  view rest.log
+ 1292  view application.log
+ 1293  clear
+ 1294  cd /root/CoAService
+ 1295  ls -ltr
+ 1296  vi application.properties
+ 1297  cd /root/builds/
+ 1298  ls -ltr
+ 1299  cp /root/CoAService
+ 1300  cp CoAService-13.jar /root/CoAService
+ 1301  cd /root/CoAService
+ 1302  ls -ltr
+ 1303  mv CoAService-13.jar CoAService-12.jar
+ 1304  ls -ltr
+ 1305  cd /etc/init.d/
+ 1306  ls -ltr
+ 1307  ./CoAServiceProd status
+ 1308  ./CoAService restart
+ 1309  cd /root/CoAService
+ 1310  cd log
+ 1311  tail -f application.log
+ 1312  cd ..
+ 1313  ls -ltr
+ 1314  cd /root/builds/
+ 1315  ls -ltr
+ 1316  cd 12/
+ 1317  ls -ltr
+ 1318  cp CoAService-12.jar /root/CoAService
+ 1319  cd /root/CoAService
+ 1320  ls -ltr
+ 1321  cd /etc/init.d/
+ 1322  ./CoAService status
+ 1323  ./CoAService restart
+ 1324  cd /root/CoAService
+ 1325  ls -ltr
+ 1326  cd log
+ 1327  tail -f application.log
+ 1328  cd ..
+ 1329  ls -ltr
+ 1330  vi application.properties
+ 1331  cd /etc/init.d/
+ 1332  ./CoAService status
+ 1333  ./CoAService restart
+ 1334  cd /root/CoAService
+ 1335  cd log
+ 1336  tail -f application.log
+ 1337  clear
+ 1338  ls -ltr
+ 1339  cd builds/
+ 1340  ls -ltr
+ 1341  mkdir 14
+ 1342  cd 14/
+ 1343  ls -ltr
+ 1344  pwd
+ 1345  ls -ltr
+ 1346  cp CoAService-14.jar /root/CoAService
+ 1347  cp log4j2-spring.xml /root/CoAService
+ 1348  cd /root/CoAService
+ 1349  ls -ltr
+ 1350  rm -rf CoAService-12.jar
+ 1351  mv CoAService-12.conf CoAService-14.conf
+ 1352  ls -ltr
+ 1353  cd /etc/init.d/
+ 1354  ls -ltr
+ 1355  rm -rf CoAService
+ 1356  history | grep ln
+ 1357  ln -s /root/CoAService/CoAService-14.jar /etc/init.d/CoAService
+ 1358  ls -ltr
+ 1359  ./CoAService restart
+ 1360  cd /root/CoAService
+ 1361  ls -ltr
+ 1362  cd log
+ 1363  tail -f application.log
+ 1364  cd /root/CoAService
+ 1365  ls -ltr
+ 1366  vi application.properties
+ 1367  cd /etc/init.d/
+ 1368  ls -ltr
+ 1369  ./CoAService restart
+ 1370  cd /root/CoAService
+ 1371  cd log
+ 1372  tail -f application.log
+ 1373  cd ..
+ 1374  ls -ltr
+ 1375  cd /root/builds/
+ 1376  ls -ltr
+ 1377  cd 14/
+ 1378  ls -ltr
+ 1379  cp CoAService-14.jar /root/CoAServicePROD/
+ 1380  cd /root/CoAServicePROD/
+ 1381  ls -ltr
+ 1382  cd log
+ 1383  tail -f application.log
+ 1384  ls -ltr
+ 1385  cd ..
+ 1386  ls -ltr
+ 1387  pwd
+ 1388  ls -ltr
+ 1389  mv CoAService-14.jar CoAService-12.jar
+ 1390  ls -ltr
+ 1391  cd /etc/init.d/
+ 1392  ls -ltr
+ 1393  ./CoAServiceProd restart
+ 1394  cd /root/CoAServicePROD/
+ 1395  cd log
+ 1396  tail -f application.log
+ 1397  cd ..
+ 1398  cd log
+ 1399  ls -ltr
+ 1400  cd ..
+ 1401  ls -ltr
+ 1402  cat application.properties
+ 1403  cd /root/CoAService
+ 1404  ls -ltr
+ 1405  vi application.properties
+ 1406  cd /etc/init.d/
+ 1407  ls -ltr
+ 1408  ./CoAService restart
+ 1409  cd /root/CoAService
+ 1410  cd log
+ 1411  tail -f application.log
+ 1412  cd ..
+ 1413  ls -ltr
+ 1414  cat application.properties
+ 1415  cd /root/CoAServicePROD/
+ 1416  ls -ltr
+ 1417  cat application.properties
+ 1418  cd log
+ 1419  tail -f application.log
+ 1420  ls -ltr
+ 1421  cd ..
+ 1422  ls -ltr
+ 1423  history | grep mv
+ 1424  cd /etc/init.d/
+ 1425  ls -ltr
+ 1426  ./CoAServiceProd status
+ 1427  cd /root/CoAService
+ 1428  ls -ltr
+ 1429  cd CoAServicePROD/
+ 1430  cd log
+ 1431  view application.log
+ 1432  cd ../
+ 1433  cd CoAService
+ 1434  ls
+ 1435  cd log
+ 1436  tail -f application.log
+ 1437  cd ../
+ 1438  cd log
+ 1439  view rest.log
+ 1440  cd ../../
+ 1441  cd CoAServicePROD/
+ 1442  cd log
+ 1443  view rest.log
+ 1444  cd ../../
+ 1445  cd CoAService
+ 1446  cd log
+ 1447  tail -f application.log
+ 1448  cd ../../
+ 1449  cd CoAServicePROD/
+ 1450  ls
+ 1451  ls -ltr
+ 1452  cd log
+ 1453  view application.log
+ 1454  ls
+ 1455  cd ../
+ 1456  ls
+ 1457  ls -ltr
+ 1458  cd log
+ 1459  tail -f application.log
+ 1460  cd CoAServicePROD/
+ 1461  cd log
+ 1462  view rest.log
+ 1463  cd CoAServicePROD/log
+ 1464  view rest.log
+ 1465  cd CoAServicePROD/log
+ 1466  view rest.log
+ 1467  view rest.2022-08-08-11.log
+ 1468  cd scripts/
+ 1469  ./connect_isg.sh
+ 1470  xit
+ 1471  exit
+ 1472  cd scripts/
+ 1473  ls -ltr
+ 1474  view pod_subscriber_prod_new.py
+ 1475  exit
+ 1476  telnet radiusdb1.srv.gl 3306
+ 1477  telnet radius-lab.srv.gl 3306
+ 1478  cd scripts/
+ 1479  ls -ltr
+ 1480  ./ippool_move_pool.py --new-pool=test-pool --cidr=194.177.251.187/32
+ 1481  ./ippool_move_pool.py --new_pool=test-pool --cidr=194.177.251.187/32
+ 1482  ./ippool_move_pool.py --new_pool=main_pool --cidr=194.177.251.187/32
+ 1483  exit
+ 1484  ls -ltr
+ 1485  cd scripts/
+ 1486  ls -ltr
+ 1487  ./ippool_move_pool.py
+ 1488  ./ippool_move_pool.py --new-pool=static_main --cidr=88.83.0.1/32
+ 1489  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.1/32
+ 1490  exit
+ 1491  cd scripts/
+ 1492  ls -ltr
+ 1493  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.2/32
+ 1494  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.3/32
+ 1495  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.4/32
+ 1496  exit
+ 1497  cd scripts/
+ 1498  ./connect_isg.sh
+ 1499  exit
+ 1500  cd scripts/
+ 1501  ls -ltr
+ 1502  view pod_dsldiag_new_radius.py
+ 1503  view pod_subscriber_prod_new.py
+ 1504  view pod_reset_esb.py
+ 1505  grep python2 *
+ 1506  grep python *
+ 1507  cat /etc/os-release
+ 1508  cd scripts/
+ 1509  ./connect_isg.sh
+ 1510  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.62"
+ 1511  ./connect_isg.sh
+ 1512  exit
+ 1513  cd scripts/
+ 1514  ls -ltr
+ 1515  exit
+ 1516  cd scripts/
+ 1517  ls -ltr
+ 1518  ./ippool_move_pool.py
+ 1519  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.0/30
+ 1520  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1521  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30
+ 1522  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1523  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30
+ 1524  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1525  man tee
+ 1526  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30 | tee ./88.83.0.0-30
+ 1527  ls -ltr
+ 1528  cat 88.83.0.0-30
+ 1529  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30 | tee ./88.83.0.0-30
+ 1530  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/28 | tee ./88.83.0.0-28
+ 1531  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/26
+ 1532  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/23
+ 1533  ls -ltr
+ 1534  vi pod_subscriber_prod_new.py
+ 1535  vi reset
+ 1536  ./pod_subscriber_prod_new.py ./reset
+ 1537  > reset
+ 1538  vi reset
+ 1539  ./pod_subscriber_prod_new.py ./reset
+ 1540  ./connect_isg.sh
+ 1541  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.2.0/30
+ 1542  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.2.0/23
+ 1543  ./connect_isg.sh
+ 1544  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.4.0/23
+ 1545  ./connect_isg.sh
+ 1546  exit
+ 1547  cd scripts/
+ 1548  ./connect_isg.sh
+ 1549  exit
+ 1550  cd scripts/
+ 1551  ls -ltr
+ 1552  ./ippool_move_pool.py
+ 1553  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.6.0/24
+ 1554  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.7.0/24
+ 1555  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.8.0/24
+ 1556  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.9.0/24
+ 1557  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.10.0/24
+ 1558  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.11.0/24
+ 1559  exit
+ 1560  cd scripts/
+ 1561  ./connect_isg.sh
+ 1562  exit
+ 1563  cd scripts/
+ 1564  ./connect_isg.sh
+ 1565  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.6"
+ 1566  ./connect_isg.sh
+ 1567  exit
+ 1568  ls -ltr
+ 1569  mv reset.dsl scripts/
+ 1570  cd scripts/
+ 1571  ls -ltr
+ 1572  vi pod_subscriber_prod_new.py
+ 1573  ./pod_subscriber_prod_new.py reset.dsl
+ 1574  exit
+ 1575  mv reset.dsl scripts/
+ 1576  cd scripts/
+ 1577  ls -ltr
+ 1578  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1579  exit
+ 1580  cd scripts/
+ 1581  mv ../reset.dsl ./
+ 1582  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1583  exit
+ 1584  cd scripts/
+ 1585  ls -ltr
+ 1586  pod_subscriber_prod_new.py ./reset.dsl
+ 1587  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1588  exit
+ 1589  cd scripts/
+ 1590  ./con
+ 1591  ./connect_isg.sh
+ 1592  exit
+ 1593  cd scripts/
+ 1594  ./connect_isg.sh
+ 1595  exit
+ 1596  cd scripts/
+ 1597  ./connect_isg.sh
+ 1598  exit
+ 1599  apt update
+ 1600  exit
+ 1601  ls -ltr
+ 1602  cd scripts/
+ 1603  ls -ltr
+ 1604  exit
+ 1605  apt update
+ 1606  apt upgrade
+ 1607  uptime
+ 1608  reboot
+ 1609  uptime
+ 1610  top
+ 1611  do-release-upgrade
+ 1612  top
+ 1613  lsmod | grep floppy
+ 1614  rmmod floppy
+ 1615  lsmod | grep floppy
+ 1616  echo "blacklist floppy" | sudo tee /etc/modprobe.d/blacklist-floppy.conf
+ 1617  cat /etc/modprobe.d/blacklist-floppy.conf
+ 1618  top
+ 1619  apt update
+ 1620  apt upgrade
+ 1621  apt autoremove
+ 1622  ls -ltr
+ 1623  cd scripts/
+ 1624  ls -ltr
+ 1625  ./connect_isg.sh
+ 1626  cat connect_isg.sh
+ 1627  ssh -oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1  chrisadmin@194.177.227.1
+ 1628  ssh chrisadmin@194.177.227.1
+ 1629  nmap -p22 194.177.227.1
+ 1630  apt install nmap
+ 1631  nmap -p22 194.177.227.1
+ 1632  ufw status
+ 1633  nmap -p22 194.177.227.33
+ 1634  ls -ltr
+ 1635  nmap -p22 194.177.227.33
+ 1636  ifconfig
+ 1637  route
+ 1638  traceroute 194.177.227.1
+ 1639  nmap -p22 194.177.227.33
+ 1640  lsmod | grep floppy
+ 1641  exit
+ 1642  ls -ltr
+ 1643  cd CoAServicePROD
+ 1644  ls -ltr
+ 1645  cd log/
+ 1646  tail -f application.log
+ 1647  date
+ 1648  cd /etc/init.d/
+ 1649  ls -ltr
+ 1650  service CoAServiceProd status
+ 1651  service CoAService status
+ 1652  cd /
+ 1653  ls -ltr
+ 1654  cd r
+ 1655  cd root/
+ 1656  ls -ltr
+ 1657  service CoAServiceProd restart
+ 1658  cd CoAServicePROD
+ 1659  ls -ltr
+ 1660  cd log/
+ 1661  tail -f application.log
+ 1662  cd .
+ 1663  cd ..
+ 1664  ls -ltr
+ 1665  cd CoAService
+ 1666  service CoAService status
+ 1667  service CoAService start
+ 1668  cd log/
+ 1669  tail -f application.log
+ 1670  ls -ltr
+ 1671  tail -f application.log
+ 1672  service CoAService status
+ 1673  service CoAServiceProd status
+ 1674  date
+ 1675  system info
+ 1676  up time
+ 1677  uptime
+ 1678  date
+ 1679  systeminfo | find "System Boot Time"
+ 1680  cd /var/log/
+ 1681  ls -ltr
+ 1682  view syslog
+ 1683  uptime -s
+ 1684  date
+ 1685  who -b
+ 1686  last reboot|head -2
+ 1687  date
+ 1688  cd /root/CoAServicePROD/log/
+ 1689  tail -f application.log
+ 1690  ls -ltr
+ 1691  view application.log
+ 1692  grep "Exception Message : Failed at sending CoA -> Receive timed out" application.*
+ 1693  clear
+ 1694  grep "Exception Message : Failed at sending CoA -> Receive timed out" application.*
+ 1695  clear
+ 1696  ls -ltr
+ 1697  ps -ef | grep -i java
+ 1698  cd /
+ 1699  cd /home/
+ 1700  ls -ltr
+ 1701  cd icinga/
+ 1702  ls -ltr
+ 1703  cd .ssh/
+ 1704  ls -ltr
+ 1705  cat authorized_keys
+ 1706  cat yes.pub
+ 1707  vi authorized_keys
+ 1708  vi /etc/ssh/sshd_config
+ 1709  service sshd status
+ 1710  vi /etc/ssh/sshd_config
+ 1711  ls -ltr
+ 1712  cd /etc/ss
+ 1713  cd /etc/ssh/
+ 1714  ls -ltr
+ 1715  cat sshd_config.ucf-dist
+ 1716  diff sshd_config.ucf-dist sshd_config
+ 1717  ls -ltr
+ 1718  vi ~/.ssh/config
+ 1719  cat ssh_config
+ 1720  cat sshd_config
+ 1721  cd /var/log/
+ 1722  ls -ltr
+ 1723  view syslog
+ 1724  cd /root/CoAServicePROD/
+ 1725  ls -ltr
+ 1726  cd log/
+ 1727  ls -ltr
+ 1728  tail -f application.log
+ 1729  date
+ 1730  tail -f rest.log
+ 1731  ifconfig
+ 1732  exit
+ 1733  ifconfig
+ 1734  cd scripts/
+ 1735  ls -ltr
+ 1736  view pod_dsldiag.py
+ 1737  view pod_dsldiag_new_radius.py
+ 1738  ./connect_isg.sh
+ 1739  vi connect_isg.sh
+ 1740  ./connect_isg.sh
+ 1741  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.10"
+ 1742  ./connect_isg.sh
+ 1743  nmap -p 22 194.177.227.1
+ 1744  nmap -p 22 194.177.227.12
+ 1745  cd /var/log
+ 1746  ls -ltr
+ 1747  tail -100 auth.log
+ 1748  vi /etc/ssh/sshd_config
+ 1749  tail -100 auth.log
+ 1750  tail -f auth.log
+ 1751  vi /etc/ssh/sshd_config
+ 1752  tail -f auth.log
+ 1753  systemctl restart ssh.service
+ 1754  systemctl status ssh.service
+ 1755  vi /etc/ssh/sshd_config
+ 1756  systemctl restart ssh.service
+ 1757  systemctl status ssh.service
+ 1758  vi /etc/ssh/sshd_config
+ 1759  systemctl restart ssh.service
+ 1760  systemctl status ssh.service
+ 1761  exit
+ 1762  ifconfig
+ 1763  exit
+ 1764  cd scripts/
+ 1765  ./connect_isg.sh
+ 1766  exit
+ 1767  ls -ltr
+ 1768  mv reset_not_owner.dsl scripts/
+ 1769  cd scripts/
+ 1770  ls -ltr
+ 1771  view pod_subscriber_prod_new.py
+ 1772  ./pod_subscriber_prod_new.py ./reset_not_owner.dsl
+ 1773  ls -ltr
+ 1774  ./pod_subscriber_prod_new.py ./reset_not_owner.dsl
+ 1775  exit
+ 1776  cd scripts/
+ 1777  ./connect_isg.sh
+ 1778  traceroute 194.177.227.1
+ 1779  ssh chrisadmin@194.177.227.1
+ 1780  route
+ 1781  exit
+ 1782  cd scripts/
+ 1783  ls -ltr
+ 1784  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1785  ssh chrisadmin@194.177.227.1
+ 1786  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1787  exit
+ 1788  cd scripts/
+ 1789  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1790  vi reset
+ 1791  > reset
+ 1792  vi reset
+ 1793  ./pod_subscriber_prod_new.py ./reset
+ 1794  > reset
+ 1795  vi reset
+ 1796  ./pod_subscriber_prod_new.py ./reset
+ 1797  > reset
+ 1798  vi reset
+ 1799  ./pod_subscriber_prod_new.py ./reset
+ 1800  > reset
+ 1801  vi reset
+ 1802  ./pod_subscriber_prod_new.py ./reset
+ 1803  > reset
+ 1804  vi reset
+ 1805  ./pod_subscriber_prod_new.py ./reset
+ 1806  exit
+ 1807  cd scripts/
+ 1808  > reset
+ 1809  vi reset
+ 1810  ./pod_subscriber_prod_new.py ./reset
+ 1811  > reset
+ 1812  vi reset
+ 1813  ./pod_subscriber_prod_new.py ./reset
+ 1814  exit
+ 1815  cd scripts/
+ 1816  ./connect_isg.sh
+ 1817  exit
+ 1818  cd scripts/
+ 1819  ./connect_isg.sh
+ 1820  nmap -p 22 194.177.227.1
+ 1821  cat connect_isg.sh
+ 1822  ssh chrisadmin@194.177.227.1
+ 1823  cat /etc/os-release
+ 1824  ssh chrisadmin@194.177.227.1
+ 1825  ssh -v chrisadmin@194.177.227.1
+ 1826  apt update
+ 1827  apt list --upgradable
+ 1828  ssh chrisadmin@192.168.5.1
+ 1829  nmap -p 22 192.168.5.1
+ 1830  exit
+ 1831  cd scripts/
+ 1832  ./connect_isg.sh
+ 1833  exit
+ 1834  cd scripts/
+ 1835  cat connect_isg.sh
+ 1836  apt update
+ 1837  apt list --upgradable
+ 1838  apt upgrade
+ 1839  reboot
+ 1840  exit
+ 1841  ls -ltr
+ 1842  cd /etc/init.d/
+ 1843  ls -ltr
+ 1844  ./CoAService status
+ 1845  cd /root/
+ 1846  ls -ltr
+ 1847  cd CoAServicePROD
+ 1848  ls -ltr
+ 1849  cd log/
+ 1850  ls -ltr
+ 1851  tail -f application.log
+ 1852  ls -ltr
+ 1853  tail -f spring-stdout.log
+ 1854  ls -ltr
+ 1855  hostname
+ 1856  top
+ 1857  df -kh
+ 1858  history | grep rest
+ 1859  cd /etc/init.d/
+ 1860  ls -ltr
+ 1861  ./CoAServiceProd status
+ 1862  ./CoAServiceProd start
+ 1863  cd /root/CoAServicePROD/
+ 1864  ls -ltr
+ 1865  cd log/
+ 1866  tail -f application.log
+ 1867  cd /etc/init.d/
+ 1868  ls -ltr
+ 1869  ./CoAService status
+ 1870  ./CoAService start
+ 1871  cd /etc/
+ 1872  cd /root/
+ 1873  ls -ltr
+ 1874  cd CoAService
+ 1875  ls -ltr
+ 1876  cd log/
+ 1877  tail -f application.log
+ 1878  ls -ltr
+ 1879  date
+ 1880  tail -f application.log
+ 1881  tail -f spring-stdout.log
+ 1882  cd ..
+ 1883  ls -ltr
+ 1884  cd CoAServicePROD
+ 1885  ls -ltr
+ 1886  cd log/
+ 1887  ls -ltr
+ 1888  tail -f application.log
+ 1889  tail -f spring-stdout.log
+ 1890  view application.log
+ 1891  ls -ltr
+ 1892  view spring-stdout.log
+ 1893  ls -ltr
+ 1894  pwd
+ 1895  ls -ltr
+ 1896  cd ..
+ 1897  ps -ef | grep -i java
+ 1898  cd /home/icinga/
+ 1899  ls -ltr
+ 1900  cat PROD_CoAService_Status.sh
+ 1901  sudo ./CoAServiceProd status
+ 1902  /etc/init.d/CoAServiceProd status
+ 1903  cat CoAService_Status.sh
+ 1904  /etc/init.d/CoAService status
+ 1905  uptime
+ 1906  date
+ 1907  uptime
+ 1908  date
+ 1909  uptime
+ 1910  cd /var/log/
+ 1911  ls -ltr
+ 1912  view syslog
+ 1913  uptime
+ 1914  view syslog
+ 1915  cd /root/
+ 1916  ls -ltr
+ 1917  cd CoAServicePROD
+ 1918  ls -ltr
+ 1919  cd log/
+ 1920  ls -ltr
+ 1921  view spring-stdout.log
+ 1922  cd /var/log/
+ 1923  ls -ltr
+ 1924  view syslog
+ 1925  grep "CoAServiceProd.service: Consumed 19min 25.861s CPU time" syslog
+ 1926  sar 5 5
+ 1927  top
+ 1928  cd /home/icinga/
+ 1929  ls -ltr
+ 1930  df -kh
+ 1931  free -h
+ 1932  ls -ltr
+ 1933  ps -ef | grep -i java
+ 1934  uptime
+ 1935  cat /var/log/syslog | grep reboot
+ 1936  crontab -l
+ 1937  cd /var/log/
+ 1938  ls -ltr
+ 1939  view syslog
+ 1940  cat /var/log/syslog | grep reboot
+ 1941  view syslog
+ 1942  grep "LXCFS" /var/log/syslog
+ 1943  view syslog
+ 1944  time
+ 1945  uptime
+ 1946  view syslog
+ 1947  journalctl --list-boots
+ 1948  journalctl -b -1
+ 1949  !
+ 1950  ls -ltr
+ 1951  grep "Starting Update APT News" syslog
+ 1952  date
+ 1953  top
+ 1954  uptimr
+ 1955  uptime
+ 1956  ls -ltr
+ 1957  view wtmp
+ 1958  clear
+ 1959  top
+ 1960  clear
+ 1961  cd /r
+ 1962  cd /root/
+ 1963  ls -ltr
+ 1964  cd /etc/init.d/
+ 1965  ls -ltr
+ 1966  cd ..
+ 1967  cd /root/
+ 1968  service CoAService status
+ 1969  pwd
+ 1970  /etc/init.d/CoAService status
+ 1971  cat CoAService
+ 1972  cd /etc/init.d/
+ 1973  ls -ltr
+ 1974  cd scripts/
+ 1975  ./connect_isg.sh
+ 1976  exit
+ 1977  cd scripts/
+ 1978  ./connect_isg.sh
+ 1979  it
+ 1980  exit
+ 1981  cd scripts/
+ 1982  ./connect_isg.sh
+ 1983  exit
+ 1984  cd scripts/
+ 1985  ./connect_isg.sh
+ 1986  exit
+ 1987  cd scripts/
+ 1988  ./connect_isg.sh
+ 1989  exit
+ 1990  cd scripts/
+ 1991  ./connect_isg.sh
+ 1992  exit
+ 1993  apt update
+ 1994  apt upgrade
+ 1995  reboot
+ 1996  cat /etc/os-release
+ 1997  apt dist-upgrade
+ 1998  cat /etc/os-release
+ 1999  exit
+ 2000  sudo -S etc/init.d/CoAServicePROD status
+ 2001  ps -ef | grep -i java
+ 2002  uptime
+ 2003  cd /etc/init.d/
+ 2004  ls -ltr
+ 2005  ./CoAService status
+ 2006  history
+root@pe-bridge:/etc/init.d# service CoAService status
+○ CoAService.service - LSB: CoAService
+     Loaded: loaded (/etc/init.d/CoAService; generated)
+     Active: inactive (dead)
+       Docs: man:systemd-sysv-generator(8)
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Not running
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Not running
+root@pe-bridge:/etc/init.d# ./CoAService start
+Application is running as root (UID 0). This is considered insecure.
+Started [6733]
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Running [6733]
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Running [6733]
+root@pe-bridge:/etc/init.d# ./CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Running [6733]
+root@pe-bridge:/etc/init.d# /etc/init.d/CoAService status
+Application is running as root (UID 0). This is considered insecure.
+Running [6733]
+root@pe-bridge:/etc/init.d# ls -ltr
+total 140
+-rwxr-xr-x 1 root root 1071 Aug 21  2015 atd
+-rwxr-xr-x 1 root root 2269 Apr 22  2017 acpid
+-rwxr-xr-x 1 root root 1222 May 21  2017 screen-cleanup
+-rwxr-xr-x 1 root root 2083 Aug 15  2017 ufw
+-rwxr-xr-x 1 root root 2044 Aug 15  2017 kmod
+-rwxr-xr-x 1 root root  586 Dec  3  2017 lvm2-lvmpolld
+-rwxr-xr-x 1 root root  695 Dec  3  2017 lvm2
+-rwxr-xr-x 1 root root 1479 Feb 15  2018 keyboard-setup.sh
+-rwxr-xr-x 1 root root 1503 Feb 21  2018 iscsid
+-rwxr-xr-x 1 root root  985 Mar  4  2018 grub-common
+-rwxr-xr-x 1 root root 1306 Mar 15  2018 uuidd
+-rwxr-xr-x 1 root root 1846 Mar 22  2018 open-vm-tools
+-rwxr-xr-x 1 root root 1391 Apr 17  2018 unattended-upgrades
+-rwxr-xr-x 1 root root 1232 Apr 19  2018 console-setup.sh
+-rwxr-xr-x 1 root root 3152 Sep 30  2019 dbus
+-rwxr-xr-x 1 root root 4417 Oct 15  2019 rsync
+-rwxr-xr-x 1 root root 2638 Dec 13  2019 irqbalance
+-rwxr-xr-x 1 root root 2827 Jan  9  2020 multipath-tools
+-rwxr-xr-x 1 root root 2063 Jan 23  2020 nagios-nrpe-server
+-rwxr-xr-x 1 root root  896 Feb  4  2020 cryptdisks-early
+-rwxr-xr-x 1 root root  937 Feb  4  2020 cryptdisks
+-rwxr-xr-x 1 root root 3740 Apr  1  2020 apparmor
+-rwxr-xr-x 1 root root 2498 Apr 17  2020 lxcfs
+lrwxrwxrwx 1 root root   34 Jun 18  2020 DSLService -> /root/DSLService/DSLService-33.jar
+-rwxr-xr-x 1 root root 3062 Mar 17  2021 cron
+-rwxr-xr-x 1 root root 2762 Oct 19  2021 x11-common
+-rwxr-xr-x 1 root root 2433 Jan 19  2022 open-iscsi
+-rwxr-xr-x 1 root root 1748 Feb 20  2022 hwclock.sh
+-rwxr-xr-x 1 root root 1386 Feb 23  2022 plymouth
+-rwxr-xr-x 1 root root  760 Feb 23  2022 plymouth-log
+-rwxr-xr-x 1 root root  959 Feb 25  2022 procps
+-rwxr-xr-x 1 root root 2915 May 10  2022 apport
+lrwxrwxrwx 1 root root   38 Aug  4  2022 CoAServiceProd -> /root/CoAServicePROD/CoAService-12.jar
+lrwxrwxrwx 1 root root   34 Aug  8  2022 CoAService -> /root/CoAService/CoAService-14.jar
+-rwxr-xr-x 1 root root 4060 Nov 15  2022 ssh
+-rwxr-xr-x 1 root root 6871 Mar 20  2023 udev
+root@pe-bridge:/etc/init.d# /etc/init.d/CoAServiceProd status
+Application is running as root (UID 0). This is considered insecure.
+Not running
+root@pe-bridge:/etc/init.d# history
+ 1015  ls -ltr
+ 1016  mkdir 12
+ 1017  cd 12
+ 1018  ls -ltr
+ 1019  cd /root/CoAService
+ 1020  ls -ltr
+ 1021  mv CoAService-10.conf CoAService-12.conf
+ 1022  ls -ltr
+ 1023  rm -rf CoAService-10.jar
+ 1024  cd /etc/init.d/
+ 1025  ls -ltr
+ 1026  rm -rf CoAService
+ 1027  cd /root/CoAService
+ 1028  ls -ltr
+ 1029  cd /root/builds/12/
+ 1030  ls -ltr
+ 1031  cp CoAService-12.jar /root/CoAService
+ 1032  cp log4j2-spring.xml /root/CoAService
+ 1033  cd /root/CoAService
+ 1034  ls -ltr
+ 1035  history | grep ln
+ 1036  sudo ln -s /root/CoAService/CoAService-12.jar /etc/init.d/CoAService
+ 1037  cd /etc/init.d/
+ 1038  ls -ltr
+ 1039  ./CoAService restart
+ 1040  cd /root/CoAService
+ 1041  cd log/
+ 1042  tail -f application.log
+ 1043  cat ../application.properties
+ 1044  tail -f application.log
+ 1045  clear
+ 1046  tail -f application.log
+ 1047  tail -f rest.log
+ 1048  ls -ltr
+ 1049  cat ../application.properties
+ 1050  tail -f application.log
+ 1051  tail -f rest.log
+ 1052  tail -f application.log
+ 1053  tail -f rest.log
+ 1054  tail -f application.log
+ 1055  view application.log
+ 1056  cd ..
+ 1057  vi application.properties
+ 1058  cat /root/CoAServicePROD/application.properties
+ 1059  vi application.properties
+ 1060  cd /etc/init.d/
+ 1061  ls -ltr
+ 1062  ./CoAService restart
+ 1063  cd /root/CoAService/log/
+ 1064  tail -f application.log
+ 1065  cd ..
+ 1066  ls -ltr
+ 1067  cat application.properties
+ 1068  cat /root/CoAServicePROD/application.properties
+ 1069  cd scripts/
+ 1070  ls -ltr
+ 1071  view pod_dsldiag_new_radius.py
+ 1072  exit
+ 1073  clear
+ 1074  ls -ltr
+ 1075  cd CoAServicePROD/
+ 1076  ls -ltr
+ 1077  cd ..
+ 1078  ls -ltr
+ 1079  cd CoAService
+ 1080  ls -ltr
+ 1081  cat application.properties
+ 1082  ls -ltr
+ 1083  cp CoAService-12.jar /root/CoAServicePROD/
+ 1084  cp log4j2-spring.xml /root/CoAServicePROD/
+ 1085  cd /root/CoAServicePROD/
+ 1086  ls -ltr
+ 1087  cd /etc/init.d/
+ 1088  ls -ltr
+ 1089  rm -rf CoAServicePROD
+ 1090  cd /root/CoAServicePROD/
+ 1091  ls -ltr
+ 1092  mv CoAService-4.conf CoAService-12.conf
+ 1093  ls -ltr
+ 1094  mv CoAService-4.jar /root/builds/
+ 1095  ls -ltr
+ 1096  history | grep ln
+ 1097  sudo ln -s /root/CoAServicePROD/CoAService-12.jar /etc/init.d/CoAServiceProd
+ 1098  cd /etc/init.d/
+ 1099  ls -ltr
+ 1100  ./CoAServiceProd status
+ 1101  ./CoAServiceProd start
+ 1102  cd /root/CoAServicePROD/
+ 1103  cd log/
+ 1104  tail -f application.log
+ 1105  cd /etc/init.d/
+ 1106  ./CoAServiceProd restart
+ 1107  cd /root/CoAServicePROD/log/
+ 1108  tail -f application.log
+ 1109  ls -ltr
+ 1110  tail -f spring-stdout.log
+ 1111  cd ..
+ 1112  ls -ltr
+ 1113  cat application.properties
+ 1114  cd log
+ 1115  ls -ltr
+ 1116  view spring-stdout.log
+ 1117  ls -ltr
+ 1118  cd ..
+ 1119  ls -ltr
+ 1120  cat CoAService-12.conf
+ 1121  ls -ltr
+ 1122  cd log/
+ 1123  ls -ltr
+ 1124  cd /etc/init.d/
+ 1125  ls -ltr
+ 1126  ./CoAServiceProd status
+ 1127  ./CoAServiceProd start
+ 1128  tail -f /root/CoAServicePROD/log/application.log
+ 1129  tail -f /root/CoAServicePROD/log/spring-stdout.log
+ 1130  cd /root/CoAService
+ 1131  cd /root/CoAServicePROD/
+ 1132  ls -ltr
+ 1133  cat /root/CoAService
+ 1134  ls -ltr /root/CoAService
+ 1135  ls -ltr
+ 1136  cat CoAService-12.conf
+ 1137  cd ..
+ 1138  cd CoAServicePROD/
+ 1139  ls -ltr
+ 1140  cd log
+ 1141  ls -ltr
+ 1142  date
+ 1143  view spring-stdout.log
+ 1144  ls -ltr
+ 1145  cd ..
+ 1146  ls -ltr
+ 1147  cat CoAService-12.conf
+ 1148  cd /root/CoAService
+ 1149  ls -ltr
+ 1150  cat CoAService-12.conf
+ 1151  netstat -anp | grep 9090
+ 1152  ps -ef | grep 18389
+ 1153  cd /root/CoAService
+ 1154  cd /root/CoAServicePROD/
+ 1155  ls -ltr
+ 1156  history | grep CoAServicePROD
+ 1157  ls -ltr
+ 1158  ps -ef | grep 18389
+ 1159  kill -9 18389
+ 1160  cd /etc/init.d/
+ 1161  ls -ltr
+ 1162  ./CoAServiceProd status
+ 1163  ./CoAServiceProd start
+ 1164  tail -f /root/CoAServicePROD/log
+ 1165  tail -f /root/CoAServicePROD/log/application.log
+ 1166  cd /root/CoAServicePROD/
+ 1167  ls -ltr
+ 1168  cat application.properties
+ 1169  cd log/
+ 1170  tail -f application.log
+ 1171  tail -f rest.log
+ 1172  ps -ef | grep -i java
+ 1173  tail -f application.log
+ 1174  ls -ltr
+ 1175  cd ..
+ 1176  ls -ltr
+ 1177  clear
+ 1178  ps -ef | grep -i java
+ 1179  ls -ltr
+ 1180  cd CoAServicePROD/
+ 1181  cd log
+ 1182  ls -ltr
+ 1183  tail -f application.log
+ 1184  ls -ltr
+ 1185  date
+ 1186  tail -f spring-stdout.log
+ 1187  ls -ltr
+ 1188  cd ..
+ 1189  ls -ltr
+ 1190  cd ..
+ 1191  cd CoAService
+ 1192  cd log
+ 1193  ls -ltr
+ 1194  tail -f application.log
+ 1195  date
+ 1196  ls -ltr
+ 1197  cd ..
+ 1198  ls -ltr
+ 1199  cd /home/icinga/
+ 1200  ls -ltr
+ 1201  cat PROD_CoAService_Status.sh
+ 1202  sudo -S /etc/init.d/CoAServicePROD status
+ 1203  cat CoAService_Status.sh
+ 1204  service CoAService status
+ 1205  cd /etc/init.d/
+ 1206  ls -ltr
+ 1207  ./CoAService status
+ 1208  ./CoAServiceProd status
+ 1209  cd /home/icinga/
+ 1210  ls -ltr
+ 1211  vi CoAService_Status.sh
+ 1212  ls -ltr
+ 1213  sh -x ./CoAService_Status.sh
+ 1214  vi CoAService_Status.sh
+ 1215  sh -x ./CoAService_Status.sh
+ 1216  vi CoAService_Status.sh
+ 1217  sh -x ./CoAService_Status.sh
+ 1218  vi CoAService_Status.sh
+ 1219  sh -x ./CoAService_Status.sh
+ 1220  vi CoAService_Status.sh
+ 1221  sh -x ./CoAService_Status.sh
+ 1222  vi CoAService_Status.sh
+ 1223  sh -x ./CoAService_Status.sh
+ 1224  vi CoAService_Status.sh
+ 1225  cd /etc/init.d/
+ 1226  sudo ./CoAService status | grep "active (running)" | wc -l
+ 1227  sudo ./CoAService status | grep "active (running)"
+ 1228  sudo ./CoAService status
+ 1229  sudo ./CoAService status | grep "Running" | wc -l
+ 1230  cd /home/icinga/
+ 1231  vi CoAService_Status.sh
+ 1232  sh -x ./CoAService_Status.sh
+ 1233  vi CoAService_Status.sh
+ 1234  sh -x ./CoAService_Status.sh
+ 1235  vi CoAService_Status.sh
+ 1236  ls -ltr
+ 1237  cat PROD_CoAService_Status.sh
+ 1238  ps -ef | grep -i java
+ 1239  ls -ltr
+ 1240  cat PROD_CoAService_Status.sh
+ 1241  clear
+ 1242  ls -ltr
+ 1243  cat CoAService_Status.sh
+ 1244  vi CoAService_Status.sh
+ 1245  sh -x ./CoAService_Status.sh
+ 1246  vi CoAService_Status.sh
+ 1247  sh -x ./CoAService_Status.sh
+ 1248  vi CoAService_Status.sh
+ 1249  ls -ltr
+ 1250  cat PROD_CoAService_Status.sh
+ 1251  vi PROD_CoAService_Status.sh
+ 1252  cd /etc/init.d/
+ 1253  ls -ltr
+ 1254  ./CoAServiceProd status
+ 1255  cd /home/icinga/
+ 1256  vi PROD_CoAService_Status.sh
+ 1257  sh -x ./PROD_CoAService_Status.sh
+ 1258  cd /root/CoAServicePROD/
+ 1259  ls -ltr
+ 1260  cd log
+ 1261  tail -f application.log
+ 1262  grep "Error" application.log
+ 1263  ls -ltr
+ 1264  grep "Error" application.2022-08-04-05.log
+ 1265  grep "Error" application.log
+ 1266  view application.log
+ 1267  ls
+ 1268  cd CoAServicePROD/
+ 1269  ls
+ 1270  cd log
+ 1271  view application.log
+ 1272  view rest.log
+ 1273  view application.log
+ 1274  cd ../
+ 1275  cd CoAService
+ 1276  ls
+ 1277  ls -ltr
+ 1278  cd ../
+ 1279  cd CoAServicePROD/
+ 1280  ls
+ 1281  cd log
+ 1282  view application.log
+ 1283  tail -f application.log
+ 1284  view application.log
+ 1285  cd CoAServicePROD/
+ 1286  ls
+ 1287  cd log
+ 1288  view application.log
+ 1289  view rest.log
+ 1290  view application.log
+ 1291  view rest.log
+ 1292  view application.log
+ 1293  clear
+ 1294  cd /root/CoAService
+ 1295  ls -ltr
+ 1296  vi application.properties
+ 1297  cd /root/builds/
+ 1298  ls -ltr
+ 1299  cp /root/CoAService
+ 1300  cp CoAService-13.jar /root/CoAService
+ 1301  cd /root/CoAService
+ 1302  ls -ltr
+ 1303  mv CoAService-13.jar CoAService-12.jar
+ 1304  ls -ltr
+ 1305  cd /etc/init.d/
+ 1306  ls -ltr
+ 1307  ./CoAServiceProd status
+ 1308  ./CoAService restart
+ 1309  cd /root/CoAService
+ 1310  cd log
+ 1311  tail -f application.log
+ 1312  cd ..
+ 1313  ls -ltr
+ 1314  cd /root/builds/
+ 1315  ls -ltr
+ 1316  cd 12/
+ 1317  ls -ltr
+ 1318  cp CoAService-12.jar /root/CoAService
+ 1319  cd /root/CoAService
+ 1320  ls -ltr
+ 1321  cd /etc/init.d/
+ 1322  ./CoAService status
+ 1323  ./CoAService restart
+ 1324  cd /root/CoAService
+ 1325  ls -ltr
+ 1326  cd log
+ 1327  tail -f application.log
+ 1328  cd ..
+ 1329  ls -ltr
+ 1330  vi application.properties
+ 1331  cd /etc/init.d/
+ 1332  ./CoAService status
+ 1333  ./CoAService restart
+ 1334  cd /root/CoAService
+ 1335  cd log
+ 1336  tail -f application.log
+ 1337  clear
+ 1338  ls -ltr
+ 1339  cd builds/
+ 1340  ls -ltr
+ 1341  mkdir 14
+ 1342  cd 14/
+ 1343  ls -ltr
+ 1344  pwd
+ 1345  ls -ltr
+ 1346  cp CoAService-14.jar /root/CoAService
+ 1347  cp log4j2-spring.xml /root/CoAService
+ 1348  cd /root/CoAService
+ 1349  ls -ltr
+ 1350  rm -rf CoAService-12.jar
+ 1351  mv CoAService-12.conf CoAService-14.conf
+ 1352  ls -ltr
+ 1353  cd /etc/init.d/
+ 1354  ls -ltr
+ 1355  rm -rf CoAService
+ 1356  history | grep ln
+ 1357  ln -s /root/CoAService/CoAService-14.jar /etc/init.d/CoAService
+ 1358  ls -ltr
+ 1359  ./CoAService restart
+ 1360  cd /root/CoAService
+ 1361  ls -ltr
+ 1362  cd log
+ 1363  tail -f application.log
+ 1364  cd /root/CoAService
+ 1365  ls -ltr
+ 1366  vi application.properties
+ 1367  cd /etc/init.d/
+ 1368  ls -ltr
+ 1369  ./CoAService restart
+ 1370  cd /root/CoAService
+ 1371  cd log
+ 1372  tail -f application.log
+ 1373  cd ..
+ 1374  ls -ltr
+ 1375  cd /root/builds/
+ 1376  ls -ltr
+ 1377  cd 14/
+ 1378  ls -ltr
+ 1379  cp CoAService-14.jar /root/CoAServicePROD/
+ 1380  cd /root/CoAServicePROD/
+ 1381  ls -ltr
+ 1382  cd log
+ 1383  tail -f application.log
+ 1384  ls -ltr
+ 1385  cd ..
+ 1386  ls -ltr
+ 1387  pwd
+ 1388  ls -ltr
+ 1389  mv CoAService-14.jar CoAService-12.jar
+ 1390  ls -ltr
+ 1391  cd /etc/init.d/
+ 1392  ls -ltr
+ 1393  ./CoAServiceProd restart
+ 1394  cd /root/CoAServicePROD/
+ 1395  cd log
+ 1396  tail -f application.log
+ 1397  cd ..
+ 1398  cd log
+ 1399  ls -ltr
+ 1400  cd ..
+ 1401  ls -ltr
+ 1402  cat application.properties
+ 1403  cd /root/CoAService
+ 1404  ls -ltr
+ 1405  vi application.properties
+ 1406  cd /etc/init.d/
+ 1407  ls -ltr
+ 1408  ./CoAService restart
+ 1409  cd /root/CoAService
+ 1410  cd log
+ 1411  tail -f application.log
+ 1412  cd ..
+ 1413  ls -ltr
+ 1414  cat application.properties
+ 1415  cd /root/CoAServicePROD/
+ 1416  ls -ltr
+ 1417  cat application.properties
+ 1418  cd log
+ 1419  tail -f application.log
+ 1420  ls -ltr
+ 1421  cd ..
+ 1422  ls -ltr
+ 1423  history | grep mv
+ 1424  cd /etc/init.d/
+ 1425  ls -ltr
+ 1426  ./CoAServiceProd status
+ 1427  cd /root/CoAService
+ 1428  ls -ltr
+ 1429  cd CoAServicePROD/
+ 1430  cd log
+ 1431  view application.log
+ 1432  cd ../
+ 1433  cd CoAService
+ 1434  ls
+ 1435  cd log
+ 1436  tail -f application.log
+ 1437  cd ../
+ 1438  cd log
+ 1439  view rest.log
+ 1440  cd ../../
+ 1441  cd CoAServicePROD/
+ 1442  cd log
+ 1443  view rest.log
+ 1444  cd ../../
+ 1445  cd CoAService
+ 1446  cd log
+ 1447  tail -f application.log
+ 1448  cd ../../
+ 1449  cd CoAServicePROD/
+ 1450  ls
+ 1451  ls -ltr
+ 1452  cd log
+ 1453  view application.log
+ 1454  ls
+ 1455  cd ../
+ 1456  ls
+ 1457  ls -ltr
+ 1458  cd log
+ 1459  tail -f application.log
+ 1460  cd CoAServicePROD/
+ 1461  cd log
+ 1462  view rest.log
+ 1463  cd CoAServicePROD/log
+ 1464  view rest.log
+ 1465  cd CoAServicePROD/log
+ 1466  view rest.log
+ 1467  view rest.2022-08-08-11.log
+ 1468  cd scripts/
+ 1469  ./connect_isg.sh
+ 1470  xit
+ 1471  exit
+ 1472  cd scripts/
+ 1473  ls -ltr
+ 1474  view pod_subscriber_prod_new.py
+ 1475  exit
+ 1476  telnet radiusdb1.srv.gl 3306
+ 1477  telnet radius-lab.srv.gl 3306
+ 1478  cd scripts/
+ 1479  ls -ltr
+ 1480  ./ippool_move_pool.py --new-pool=test-pool --cidr=194.177.251.187/32
+ 1481  ./ippool_move_pool.py --new_pool=test-pool --cidr=194.177.251.187/32
+ 1482  ./ippool_move_pool.py --new_pool=main_pool --cidr=194.177.251.187/32
+ 1483  exit
+ 1484  ls -ltr
+ 1485  cd scripts/
+ 1486  ls -ltr
+ 1487  ./ippool_move_pool.py
+ 1488  ./ippool_move_pool.py --new-pool=static_main --cidr=88.83.0.1/32
+ 1489  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.1/32
+ 1490  exit
+ 1491  cd scripts/
+ 1492  ls -ltr
+ 1493  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.2/32
+ 1494  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.3/32
+ 1495  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.4/32
+ 1496  exit
+ 1497  cd scripts/
+ 1498  ./connect_isg.sh
+ 1499  exit
+ 1500  cd scripts/
+ 1501  ls -ltr
+ 1502  view pod_dsldiag_new_radius.py
+ 1503  view pod_subscriber_prod_new.py
+ 1504  view pod_reset_esb.py
+ 1505  grep python2 *
+ 1506  grep python *
+ 1507  cat /etc/os-release
+ 1508  cd scripts/
+ 1509  ./connect_isg.sh
+ 1510  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.62"
+ 1511  ./connect_isg.sh
+ 1512  exit
+ 1513  cd scripts/
+ 1514  ls -ltr
+ 1515  exit
+ 1516  cd scripts/
+ 1517  ls -ltr
+ 1518  ./ippool_move_pool.py
+ 1519  ./ippool_move_pool.py --new_pool=static_main --cidr=88.83.0.0/30
+ 1520  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1521  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30
+ 1522  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1523  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30
+ 1524  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30
+ 1525  man tee
+ 1526  ./ippool_move_pool.py --new_pool=test_pool --cidr=88.83.0.0/30 | tee ./88.83.0.0-30
+ 1527  ls -ltr
+ 1528  cat 88.83.0.0-30
+ 1529  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/30 | tee ./88.83.0.0-30
+ 1530  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/28 | tee ./88.83.0.0-28
+ 1531  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/26
+ 1532  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.0.0/23
+ 1533  ls -ltr
+ 1534  vi pod_subscriber_prod_new.py
+ 1535  vi reset
+ 1536  ./pod_subscriber_prod_new.py ./reset
+ 1537  > reset
+ 1538  vi reset
+ 1539  ./pod_subscriber_prod_new.py ./reset
+ 1540  ./connect_isg.sh
+ 1541  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.2.0/30
+ 1542  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.2.0/23
+ 1543  ./connect_isg.sh
+ 1544  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.4.0/23
+ 1545  ./connect_isg.sh
+ 1546  exit
+ 1547  cd scripts/
+ 1548  ./connect_isg.sh
+ 1549  exit
+ 1550  cd scripts/
+ 1551  ls -ltr
+ 1552  ./ippool_move_pool.py
+ 1553  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.6.0/24
+ 1554  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.7.0/24
+ 1555  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.8.0/24
+ 1556  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.9.0/24
+ 1557  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.10.0/24
+ 1558  ./ippool_move_pool.py --new_pool=north_pool --cidr=88.83.11.0/24
+ 1559  exit
+ 1560  cd scripts/
+ 1561  ./connect_isg.sh
+ 1562  exit
+ 1563  cd scripts/
+ 1564  ./connect_isg.sh
+ 1565  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.6"
+ 1566  ./connect_isg.sh
+ 1567  exit
+ 1568  ls -ltr
+ 1569  mv reset.dsl scripts/
+ 1570  cd scripts/
+ 1571  ls -ltr
+ 1572  vi pod_subscriber_prod_new.py
+ 1573  ./pod_subscriber_prod_new.py reset.dsl
+ 1574  exit
+ 1575  mv reset.dsl scripts/
+ 1576  cd scripts/
+ 1577  ls -ltr
+ 1578  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1579  exit
+ 1580  cd scripts/
+ 1581  mv ../reset.dsl ./
+ 1582  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1583  exit
+ 1584  cd scripts/
+ 1585  ls -ltr
+ 1586  pod_subscriber_prod_new.py ./reset.dsl
+ 1587  ./pod_subscriber_prod_new.py ./reset.dsl
+ 1588  exit
+ 1589  cd scripts/
+ 1590  ./con
+ 1591  ./connect_isg.sh
+ 1592  exit
+ 1593  cd scripts/
+ 1594  ./connect_isg.sh
+ 1595  exit
+ 1596  cd scripts/
+ 1597  ./connect_isg.sh
+ 1598  exit
+ 1599  apt update
+ 1600  exit
+ 1601  ls -ltr
+ 1602  cd scripts/
+ 1603  ls -ltr
+ 1604  exit
+ 1605  apt update
+ 1606  apt upgrade
+ 1607  uptime
+ 1608  reboot
+ 1609  uptime
+ 1610  top
+ 1611  do-release-upgrade
+ 1612  top
+ 1613  lsmod | grep floppy
+ 1614  rmmod floppy
+ 1615  lsmod | grep floppy
+ 1616  echo "blacklist floppy" | sudo tee /etc/modprobe.d/blacklist-floppy.conf
+ 1617  cat /etc/modprobe.d/blacklist-floppy.conf
+ 1618  top
+ 1619  apt update
+ 1620  apt upgrade
+ 1621  apt autoremove
+ 1622  ls -ltr
+ 1623  cd scripts/
+ 1624  ls -ltr
+ 1625  ./connect_isg.sh
+ 1626  cat connect_isg.sh
+ 1627  ssh -oKexAlgorithms=+diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1  chrisadmin@194.177.227.1
+ 1628  ssh chrisadmin@194.177.227.1
+ 1629  nmap -p22 194.177.227.1
+ 1630  apt install nmap
+ 1631  nmap -p22 194.177.227.1
+ 1632  ufw status
+ 1633  nmap -p22 194.177.227.33
+ 1634  ls -ltr
+ 1635  nmap -p22 194.177.227.33
+ 1636  ifconfig
+ 1637  route
+ 1638  traceroute 194.177.227.1
+ 1639  nmap -p22 194.177.227.33
+ 1640  lsmod | grep floppy
+ 1641  exit
+ 1642  ls -ltr
+ 1643  cd CoAServicePROD
+ 1644  ls -ltr
+ 1645  cd log/
+ 1646  tail -f application.log
+ 1647  date
+ 1648  cd /etc/init.d/
+ 1649  ls -ltr
+ 1650  service CoAServiceProd status
+ 1651  service CoAService status
+ 1652  cd /
+ 1653  ls -ltr
+ 1654  cd r
+ 1655  cd root/
+ 1656  ls -ltr
+ 1657  service CoAServiceProd restart
+ 1658  cd CoAServicePROD
+ 1659  ls -ltr
+ 1660  cd log/
+ 1661  tail -f application.log
+ 1662  cd .
+ 1663  cd ..
+ 1664  ls -ltr
+ 1665  cd CoAService
+ 1666  service CoAService status
+ 1667  service CoAService start
+ 1668  cd log/
+ 1669  tail -f application.log
+ 1670  ls -ltr
+ 1671  tail -f application.log
+ 1672  service CoAService status
+ 1673  service CoAServiceProd status
+ 1674  date
+ 1675  system info
+ 1676  up time
+ 1677  uptime
+ 1678  date
+ 1679  systeminfo | find "System Boot Time"
+ 1680  cd /var/log/
+ 1681  ls -ltr
+ 1682  view syslog
+ 1683  uptime -s
+ 1684  date
+ 1685  who -b
+ 1686  last reboot|head -2
+ 1687  date
+ 1688  cd /root/CoAServicePROD/log/
+ 1689  tail -f application.log
+ 1690  ls -ltr
+ 1691  view application.log
+ 1692  grep "Exception Message : Failed at sending CoA -> Receive timed out" application.*
+ 1693  clear
+ 1694  grep "Exception Message : Failed at sending CoA -> Receive timed out" application.*
+ 1695  clear
+ 1696  ls -ltr
+ 1697  ps -ef | grep -i java
+ 1698  cd /
+ 1699  cd /home/
+ 1700  ls -ltr
+ 1701  cd icinga/
+ 1702  ls -ltr
+ 1703  cd .ssh/
+ 1704  ls -ltr
+ 1705  cat authorized_keys
+ 1706  cat yes.pub
+ 1707  vi authorized_keys
+ 1708  vi /etc/ssh/sshd_config
+ 1709  service sshd status
+ 1710  vi /etc/ssh/sshd_config
+ 1711  ls -ltr
+ 1712  cd /etc/ss
+ 1713  cd /etc/ssh/
+ 1714  ls -ltr
+ 1715  cat sshd_config.ucf-dist
+ 1716  diff sshd_config.ucf-dist sshd_config
+ 1717  ls -ltr
+ 1718  vi ~/.ssh/config
+ 1719  cat ssh_config
+ 1720  cat sshd_config
+ 1721  cd /var/log/
+ 1722  ls -ltr
+ 1723  view syslog
+ 1724  cd /root/CoAServicePROD/
+ 1725  ls -ltr
+ 1726  cd log/
+ 1727  ls -ltr
+ 1728  tail -f application.log
+ 1729  date
+ 1730  tail -f rest.log
+ 1731  ifconfig
+ 1732  exit
+ 1733  ifconfig
+ 1734  cd scripts/
+ 1735  ls -ltr
+ 1736  view pod_dsldiag.py
+ 1737  view pod_dsldiag_new_radius.py
+ 1738  ./connect_isg.sh
+ 1739  vi connect_isg.sh
+ 1740  ./connect_isg.sh
+ 1741  ssh-keygen -f "/root/.ssh/known_hosts" -R "194.177.227.10"
+ 1742  ./connect_isg.sh
+ 1743  nmap -p 22 194.177.227.1
+ 1744  nmap -p 22 194.177.227.12
+ 1745  cd /var/log
+ 1746  ls -ltr
+ 1747  tail -100 auth.log
+ 1748  vi /etc/ssh/sshd_config
+ 1749  tail -100 auth.log
+ 1750  tail -f auth.log
+ 1751  vi /etc/ssh/sshd_config
+ 1752  tail -f auth.log
+ 1753  systemctl restart ssh.service
+ 1754  systemctl status ssh.service
+ 1755  vi /etc/ssh/sshd_config
+ 1756  systemctl restart ssh.service
+ 1757  systemctl status ssh.service
+ 1758  vi /etc/ssh/sshd_config
+ 1759  systemctl restart ssh.service
+ 1760  systemctl status ssh.service
+ 1761  exit
+ 1762  ifconfig
+ 1763  exit
+ 1764  cd scripts/
+ 1765  ./connect_isg.sh
+ 1766  exit
+ 1767  ls -ltr
+ 1768  mv reset_not_owner.dsl scripts/
+ 1769  cd scripts/
+ 1770  ls -ltr
+ 1771  view pod_subscriber_prod_new.py
+ 1772  ./pod_subscriber_prod_new.py ./reset_not_owner.dsl
+ 1773  ls -ltr
+ 1774  ./pod_subscriber_prod_new.py ./reset_not_owner.dsl
+ 1775  exit
+ 1776  cd scripts/
+ 1777  ./connect_isg.sh
+ 1778  traceroute 194.177.227.1
+ 1779  ssh chrisadmin@194.177.227.1
+ 1780  route
+ 1781  exit
+ 1782  cd scripts/
+ 1783  ls -ltr
+ 1784  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1785  ssh chrisadmin@194.177.227.1
+ 1786  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1787  exit
+ 1788  cd scripts/
+ 1789  ./pod_subscriber_prod_new.py reset_not_owner.dsl
+ 1790  vi reset
+ 1791  > reset
+ 1792  vi reset
+ 1793  ./pod_subscriber_prod_new.py ./reset
+ 1794  > reset
+ 1795  vi reset
+ 1796  ./pod_subscriber_prod_new.py ./reset
+ 1797  > reset
+ 1798  vi reset
+ 1799  ./pod_subscriber_prod_new.py ./reset
+ 1800  > reset
+ 1801  vi reset
+ 1802  ./pod_subscriber_prod_new.py ./reset
+ 1803  > reset
+ 1804  vi reset
+ 1805  ./pod_subscriber_prod_new.py ./reset
+ 1806  exit
+ 1807  cd scripts/
+ 1808  > reset
+ 1809  vi reset
+ 1810  ./pod_subscriber_prod_new.py ./reset
+ 1811  > reset
+ 1812  vi reset
+ 1813  ./pod_subscriber_prod_new.py ./reset
+ 1814  exit
+ 1815  cd scripts/
+ 1816  ./connect_isg.sh
+ 1817  exit
+ 1818  cd scripts/
+ 1819  ./connect_isg.sh
+ 1820  nmap -p 22 194.177.227.1
+ 1821  cat connect_isg.sh
+ 1822  ssh chrisadmin@194.177.227.1
+ 1823  cat /etc/os-release
+ 1824  ssh chrisadmin@194.177.227.1
+ 1825  ssh -v chrisadmin@194.177.227.1
+ 1826  apt update
+ 1827  apt list --upgradable
+ 1828  ssh chrisadmin@192.168.5.1
+ 1829  nmap -p 22 192.168.5.1
+ 1830  exit
+ 1831  cd scripts/
+ 1832  ./connect_isg.sh
+ 1833  exit
+ 1834  cd scripts/
+ 1835  cat connect_isg.sh
+ 1836  apt update
+ 1837  apt list --upgradable
+ 1838  apt upgrade
+ 1839  reboot
+ 1840  exit
+ 1841  ls -ltr
+ 1842  cd /etc/init.d/
+ 1843  ls -ltr
+ 1844  ./CoAService status
+ 1845  cd /root/
+ 1846  ls -ltr
+ 1847  cd CoAServicePROD
+ 1848  ls -ltr
+ 1849  cd log/
+ 1850  ls -ltr
+ 1851  tail -f application.log
+ 1852  ls -ltr
+ 1853  tail -f spring-stdout.log
+ 1854  ls -ltr
+ 1855  hostname
+ 1856  top
+ 1857  df -kh
+ 1858  history | grep rest
+ 1859  cd /etc/init.d/
+ 1860  ls -ltr
+ 1861  ./CoAServiceProd status
+ 1862  ./CoAServiceProd start
+ 1863  cd /root/CoAServicePROD/
+ 1864  ls -ltr
+ 1865  cd log/
+ 1866  tail -f application.log
+ 1867  cd /etc/init.d/
+ 1868  ls -ltr
+ 1869  ./CoAService status
+ 1870  ./CoAService start
+ 1871  cd /etc/
+ 1872  cd /root/
+ 1873  ls -ltr
+ 1874  cd CoAService
+ 1875  ls -ltr
+ 1876  cd log/
+ 1877  tail -f application.log
+ 1878  ls -ltr
+ 1879  date
+ 1880  tail -f application.log
+ 1881  tail -f spring-stdout.log
+ 1882  cd ..
+ 1883  ls -ltr
+ 1884  cd CoAServicePROD
+ 1885  ls -ltr
+ 1886  cd log/
+ 1887  ls -ltr
+ 1888  tail -f application.log
+ 1889  tail -f spring-stdout.log
+ 1890  view application.log
+ 1891  ls -ltr
+ 1892  view spring-stdout.log
+ 1893  ls -ltr
+ 1894  pwd
+ 1895  ls -ltr
+ 1896  cd ..
+ 1897  ps -ef | grep -i java
+ 1898  cd /home/icinga/
+ 1899  ls -ltr
+ 1900  cat PROD_CoAService_Status.sh
+ 1901  sudo ./CoAServiceProd status
+ 1902  /etc/init.d/CoAServiceProd status
+ 1903  cat CoAService_Status.sh
+ 1904  /etc/init.d/CoAService status
+ 1905  uptime
+ 1906  date
+ 1907  uptime
+ 1908  date
+ 1909  uptime
+ 1910  cd /var/log/
+ 1911  ls -ltr
+ 1912  view syslog
+ 1913  uptime
+ 1914  view syslog
+ 1915  cd /root/
+ 1916  ls -ltr
+ 1917  cd CoAServicePROD
+ 1918  ls -ltr
+ 1919  cd log/
+ 1920  ls -ltr
+ 1921  view spring-stdout.log
+ 1922  cd /var/log/
+ 1923  ls -ltr
+ 1924  view syslog
+ 1925  grep "CoAServiceProd.service: Consumed 19min 25.861s CPU time" syslog
+ 1926  sar 5 5
+ 1927  top
+ 1928  cd /home/icinga/
+ 1929  ls -ltr
+ 1930  df -kh
+ 1931  free -h
+ 1932  ls -ltr
+ 1933  ps -ef | grep -i java
+ 1934  uptime
+ 1935  cat /var/log/syslog | grep reboot
+ 1936  crontab -l
+ 1937  cd /var/log/
+ 1938  ls -ltr
+ 1939  view syslog
+ 1940  cat /var/log/syslog | grep reboot
+ 1941  view syslog
+ 1942  grep "LXCFS" /var/log/syslog
+ 1943  view syslog
+ 1944  time
+ 1945  uptime
+ 1946  view syslog
+ 1947  journalctl --list-boots
+ 1948  journalctl -b -1
+ 1949  !
+ 1950  ls -ltr
+ 1951  grep "Starting Update APT News" syslog
+ 1952  date
+ 1953  top
+ 1954  uptimr
+ 1955  uptime
+ 1956  ls -ltr
+ 1957  view wtmp
+ 1958  clear
+ 1959  top
+ 1960  clear
+ 1961  cd /r
+ 1962  cd /root/
+ 1963  ls -ltr
+ 1964  cd /etc/init.d/
+ 1965  ls -ltr
+ 1966  cd ..
+ 1967  cd /root/
+ 1968  service CoAService status
+ 1969  pwd
+ 1970  /etc/init.d/CoAService status
+ 1971  cat CoAService
+ 1972  cd /etc/init.d/
+ 1973  ls -ltr
+ 1974  cd scripts/
+ 1975  ./connect_isg.sh
+ 1976  exit
+ 1977  cd scripts/
+ 1978  ./connect_isg.sh
+ 1979  it
+ 1980  exit
+ 1981  cd scripts/
+ 1982  ./connect_isg.sh
+ 1983  exit
+ 1984  cd scripts/
+ 1985  ./connect_isg.sh
+ 1986  exit
+ 1987  cd scripts/
+ 1988  ./connect_isg.sh
+ 1989  exit
+ 1990  cd scripts/
+ 1991  ./connect_isg.sh
+ 1992  exit
+ 1993  apt update
+ 1994  apt upgrade
+ 1995  reboot
+ 1996  cat /etc/os-release
+ 1997  apt dist-upgrade
+ 1998  cat /etc/os-release
+ 1999  exit
+ 2000  sudo -S etc/init.d/CoAServicePROD status
+ 2001  ps -ef | grep -i java
+ 2002  uptime
+ 2003  cd /etc/init.d/
+ 2004  ls -ltr
+ 2005  ./CoAService status
+ 2006  history
+ 2007  service CoAService status
+ 2008  ./CoAService status
+ 2009  ./CoAService start
+ 2010  ./CoAService status
+ 2011  /etc/init.d/CoAService status
+ 2012  ls -ltr
+ 2013  /etc/init.d/CoAServiceProd status
+ 2014  history
+root@pe-bridge:/etc/init.d# ./CoAServiceProd status
+Application is running as root (UID 0). This is considered insecure.
+Not running
+root@pe-bridge:/etc/init.d# ./CoAServiceProd start
+Application is running as root (UID 0). This is considered insecure.
+Started [7552]
+root@pe-bridge:/etc/init.d# ls -ltr
+total 140
+-rwxr-xr-x 1 root root 1071 Aug 21  2015 atd
+-rwxr-xr-x 1 root root 2269 Apr 22  2017 acpid
+-rwxr-xr-x 1 root root 1222 May 21  2017 screen-cleanup
+-rwxr-xr-x 1 root root 2083 Aug 15  2017 ufw
+-rwxr-xr-x 1 root root 2044 Aug 15  2017 kmod
+-rwxr-xr-x 1 root root  586 Dec  3  2017 lvm2-lvmpolld
+-rwxr-xr-x 1 root root  695 Dec  3  2017 lvm2
+-rwxr-xr-x 1 root root 1479 Feb 15  2018 keyboard-setup.sh
+-rwxr-xr-x 1 root root 1503 Feb 21  2018 iscsid
+-rwxr-xr-x 1 root root  985 Mar  4  2018 grub-common
+-rwxr-xr-x 1 root root 1306 Mar 15  2018 uuidd
+-rwxr-xr-x 1 root root 1846 Mar 22  2018 open-vm-tools
+-rwxr-xr-x 1 root root 1391 Apr 17  2018 unattended-upgrades
+-rwxr-xr-x 1 root root 1232 Apr 19  2018 console-setup.sh
+-rwxr-xr-x 1 root root 3152 Sep 30  2019 dbus
+-rwxr-xr-x 1 root root 4417 Oct 15  2019 rsync
+-rwxr-xr-x 1 root root 2638 Dec 13  2019 irqbalance
+-rwxr-xr-x 1 root root 2827 Jan  9  2020 multipath-tools
+-rwxr-xr-x 1 root root 2063 Jan 23  2020 nagios-nrpe-server
+-rwxr-xr-x 1 root root  896 Feb  4  2020 cryptdisks-early
+-rwxr-xr-x 1 root root  937 Feb  4  2020 cryptdisks
+-rwxr-xr-x 1 root root 3740 Apr  1  2020 apparmor
+-rwxr-xr-x 1 root root 2498 Apr 17  2020 lxcfs
+lrwxrwxrwx 1 root root   34 Jun 18  2020 DSLService -> /root/DSLService/DSLService-33.jar
+-rwxr-xr-x 1 root root 3062 Mar 17  2021 cron
+-rwxr-xr-x 1 root root 2762 Oct 19  2021 x11-common
+-rwxr-xr-x 1 root root 2433 Jan 19  2022 open-iscsi
+-rwxr-xr-x 1 root root 1748 Feb 20  2022 hwclock.sh
+-rwxr-xr-x 1 root root 1386 Feb 23  2022 plymouth
+-rwxr-xr-x 1 root root  760 Feb 23  2022 plymouth-log
+-rwxr-xr-x 1 root root  959 Feb 25  2022 procps
+-rwxr-xr-x 1 root root 2915 May 10  2022 apport
+lrwxrwxrwx 1 root root   38 Aug  4  2022 CoAServiceProd -> /root/CoAServicePROD/CoAService-12.jar
+lrwxrwxrwx 1 root root   34 Aug  8  2022 CoAService -> /root/CoAService/CoAService-14.jar
+-rwxr-xr-x 1 root root 4060 Nov 15  2022 ssh
+-rwxr-xr-x 1 root root 6871 Mar 20  2023 udev
+root@pe-bridge:/etc/init.d# cd CoAServiceProd
+-bash: cd: CoAServiceProd: Not a directory
+root@pe-bridge:/etc/init.d# cd log
+-bash: cd: log: No such file or directory
+root@pe-bridge:/etc/init.d#
+
+
+
+
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.2 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to root@10.60.255.40                                   │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Last login: Thu Oct 19 19:22:41 2023 from 10.60.23.148
+[root@lnaknuk7 ~]# su icinga
+bash-4.1$ ssh 172.30.8.39
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-87-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Oct 19 09:31:09 PM UTC 2023
+
+  System load:  0.0                Processes:               205
+  Usage of /:   62.5% of 19.51GB   Users logged in:         1
+  Memory usage: 9%                 IPv4 address for ens160: 172.30.8.39
+  Swap usage:   0%                 IPv4 address for ens192: 172.30.7.224
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Thu Oct 19 21:23:22 2023 from 10.60.255.40
+$ bash
+icinga@pe-bridge:~$ sudo -i
+root@pe-bridge:~# cd log
+-bash: cd: log: No such file or directory
+root@pe-bridge:~# ls -ltr
+total 27948
+-rw-r--r--  1 root root   668484 Feb  6  2019 index.html
+-rw-r--r--  1 root root        0 Aug 19  2019 test
+-rw-r--r--  1 root root 27893621 Mar 25  2020 microservices-parent-pom-hoverfly-java-0.8.2.jar-2.0.0-SNAPSHOT.jar
+drwxr-xr-x  8 root root     4096 Mar 25  2020 LookupService
+drwxr-xr-x  4 root root     4096 Jun  9  2020 microservices-parent-pom
+drwxr-xr-x  6 root root     4096 Jun  9  2020 Utilities
+drwxr-xr-x  3 root root     4096 Nov  4  2020 snap
+-rw-------  1 root root      397 Nov 30  2020 authorized_keys
+drwxr-xr-x  6 root root     4096 Jul 27  2021 DSLService
+drwxr-xr-x  3 root root     4096 Dec 16  2021 oldbuilds
+-rw-r--r--  1 root root     2132 Mar  7  2022 reset2.dsl
+drwxr-xr-x 11 root root     4096 Aug  8  2022 builds
+drwxr-xr-x  3 root root     4096 Aug  8  2022 CoAServicePROD
+drwxr-xr-x  3 root root     4096 Aug  8  2022 CoAService
+drwxr-xr-x  2 root root     4096 Jul 27 11:58 scripts
+root@pe-bridge:~# cd CoAServicePROD
+root@pe-bridge:~/CoAServicePROD# ls -ltr
+total 72476
+-rwxrwxrwx 1 root root      346 Jul 27  2021 CoAService-12.conf
+-rwxrwxrwx 1 root root      332 Jul 28  2021 application.properties
+-rwxrwxrwx 1 root root     3708 Aug  4  2022 log4j2-spring.xml
+-rwxr--r-- 1 root root 74067263 Aug  8  2022 CoAService-12.jar
+drwxrwxrwx 2 root root   131072 Oct 19 14:06 log
+root@pe-bridge:~/CoAServicePROD# cd log/
+root@pe-bridge:~/CoAServicePROD/log# ls -ltr
+total 81960
+
+
+-rw-r--r-- 1 root root 55497292 Oct 19 17:48 spring-stdout.log
+-rw-r--r-- 1 root root    10359 Oct 19 17:48 application.log
+root@pe-bridge:~/CoAServicePROD/log# tail -f application.log
+2023-10-19 14:42:56,845 - INFO g.t.m.c.s.CoAServiceImpl   --- [http-nio-8080-exec-4] [Process-afacc7f1-6e71-11ee-bd47-b6edd98208b1].micro.coaservice.service.CoAServiceImpl : CoA sent, response details -> PacketName: CoA-ACK, Response: CoA-ACK, ID 251
+2023-10-19 14:42:56,845 - INFO g.t.m.c.c.COAController   --- [http-nio-8080-exec-4] [Process-afacc7f1-6e71-11ee-bd47-b6edd98208b1]icro.coaservice.controller.COAController : ## CoA is done
+2023-10-19 17:48:34,377 - INFO o.s.i.e.EventDrivenConsumer   --- [Thread-13] []integration.endpoint.EventDrivenConsumer : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-10-19 17:48:34,419 - INFO o.s.i.c.AbstractSubscribableChannel   --- [Thread-13] []egration.channel.PublishSubscribeChannel : Channel 'CoAService-1.errorChannel' has 0 subscriber(s).
+2023-10-19 17:48:34,419 - INFO o.s.i.e.AbstractEndpoint   --- [Thread-13] []integration.endpoint.EventDrivenConsumer : stopped _org.springframework.integration.errorLogger
+2023-10-19 17:48:34,460 - INFO o.s.s.c.ExecutorConfigurationSupport   --- [Thread-13] []uling.concurrent.ThreadPoolTaskScheduler : Shutting down ExecutorService 'taskScheduler'
+2023-10-19 17:48:34,557 - INFO o.s.s.c.ExecutorConfigurationSupport   --- [Thread-13] []duling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-19 17:48:34,711 - INFO o.s.i.m.IntegrationMBeanExporter   --- [Thread-13] []gration.monitor.IntegrationMBeanExporter : Summary on shutdown: nullChannel
+2023-10-19 17:48:34,714 - INFO o.s.i.m.IntegrationMBeanExporter   --- [Thread-13] []gration.monitor.IntegrationMBeanExporter : Summary on shutdown: errorChannel
+2023-10-19 17:48:34,714 - INFO o.s.i.m.IntegrationMBeanExporter   --- [Thread-13] []gration.monitor.IntegrationMBeanExporter : Summary on shutdown: _org.springframework.integration.errorLogger.handler
+^C
+
+
+root@pe-bridge:~/CoAServicePROD/log# uptime
+ 21:37:27 up  3:48,  2 users,  load average: 0.03, 0.07, 0.03
+root@pe-bridge:~/CoAServicePROD/log# tail -f application.log
+2023-10-19 21:42:03,083 - INFO o.s.i.m.IntegrationMBeanExporter   --- [main] []gration.monitor.IntegrationMBeanExporter : Registering MessageHandler errorLogger
+2023-10-19 21:42:03,160 - INFO o.s.i.e.EventDrivenConsumer   --- [main] []integration.endpoint.EventDrivenConsumer : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-10-19 21:42:03,160 - INFO o.s.i.c.AbstractSubscribableChannel   --- [main] []egration.channel.PublishSubscribeChannel : Channel 'CoAService-1.errorChannel' has 1 subscriber(s).
+2023-10-19 21:42:03,160 - INFO o.s.i.e.AbstractEndpoint   --- [main] []integration.endpoint.EventDrivenConsumer : started _org.springframework.integration.errorLogger
+2023-10-19 21:42:03,161 - INFO s.d.s.w.p.DocumentationPluginsBootstrapper   --- [main] []plugins.DocumentationPluginsBootstrapper : Context refreshed
+2023-10-19 21:42:03,238 - INFO s.d.s.w.p.DocumentationPluginsBootstrapper   --- [main] []plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-10-19 21:42:03,354 - INFO s.d.s.w.s.ApiListingReferenceScanner   --- [main] [].web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2023-10-19 21:42:03,777 - INFO o.a.j.l.DirectJDKLog   --- [main] []g.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2023-10-19 21:42:03,821 - INFO o.s.b.w.e.t.TomcatWebServer   --- [main] []boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-19 21:42:03,834 - INFO o.s.b.StartupInfoLogger   --- [main] []t.micro.coaservice.CoAServiceApplication : Started CoAServiceApplication in 14.817 seconds (JVM running for 16.605)
+^C
+root@pe-bridge:~/CoAServicePROD/log#

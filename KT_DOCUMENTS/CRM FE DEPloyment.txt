@@ -1,0 +1,25 @@
+CRM FE
+Have to be in root before deploy 
+service tomcat2 status
+
+
+[root@centnuk38 crm]# pwd
+/opt/tomcat2/conf/crm
+[root@centnuk38 crm]#
+
+Property 
+
+CRMFE1 , CRMFE2
+
+--copy build from MSIT Fe
+
+scp /opt/tomcat2/builds/CrmFrontend-749.war centnuk41:/opt/tomcat2/builds
+scp /opt/tomcat2/builds/CrmFrontend-749.war centnuk38:/opt/tomcat2/builds
+
+
+
+--In PROD
+
+/opt/tomcat2
+
+./deploy.sh 749

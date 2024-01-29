@@ -1,0 +1,67 @@
+
+Command to list the log files
+
+find /data/swarm/ComverseQueryServiceSDK/OLD/September -type f -name '*.log'
+
+
+Command to delete the log files
+
+find /data/swarm/ComverseQueryServiceSDK/OLD/September -type f -name '*.log' - delete
+
+Command to delete the log files let 14 dys
+
+find /data/swarm/ComverseQueryServiceSDK/OLD/September -type f -name '*.log' -mtime +14 - delete
+
+command to check log in sync service
+
+grep -i "/sync/change-service" rest.2023-08-* | grep "354187"
+
+check konka logs
+
+grep -a  "24/Oct/2023" access.log | grep "500" 
+  
+  To delete in lab
+
+find /data/swarm/ComverseQueryServiceSDK -type f -name '*.log' -mtime +14 - delete
+
+
+
+ip a  *- to check any vip are added or not
+
+hostname -i *- check the ip
+
+
+sudo ln -s /home/msuser/epg-checkuser.exp epg-checkuser.exp   *-Command to softlink any script
+
+ip a  - to check any vip are added or not
+
+hostname -i - check the ip
+
+zgrep "GET /v1/flowable/process-api/query/historic-task-instances" access.log.*.gz  | wc -l - to check the lines of lines
+
+
+find . | xargs grep "10.60.190.14"   - to know the file in icinga
+
+date --date="1 month"
+
+find /home/appuser/payapp/ready -type f -mtime +90 -delete ----TUSASSPAY DB-SIT
+10.60.225.136
+
+docker service scale ms_commandservice=0
+docker service scale ms_commandservice=2
+
+
+/home/jenkins/.m2/repository/gl/telepost/crm/CrmFrontend   -CRM FE BUILD failed issue
+
+/var/lib/git2consul_cache/config/develop\ - github placeholder issue and consul unavilable
+
+
+find /data/builds/cloud/flowableengine -type d -mtime +25 -exec rm -r {} \;  ---  k8s3 build delete
+
+
+
+
+
+
+
+

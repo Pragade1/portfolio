@@ -1,0 +1,29 @@
+nohup /data/perf_testing/apache-jmeter-5.4.1/bin/jmeter -n -t /data/perf_testing/Java11/tests/FlowableEngine/Listdeadletterjobs.jmx &
+
+
+
+/data/perf_testing/Java11/tests/FlowableEngine/
+
+/data/perf_testing/Java11/results/FlowableEngine/
+
+/data/perf_testing/Java11/tests/PaymentSolution/
+
+/data/perf_testing/Java11/results/PaymentSolution/
+
+
+
+cd /data/perf_testing/apache-jmeter-5.4.1/bin
+
+
+
+nohup /data/perf_testing/apache-jmeter-5.4.1/bin/jmeter -n -t /data/perf_testing/Java11/tests/PaymentSolution/getSubscriptionsByAccountId.jmx &
+
+
+LOG CHECK
+
+zgrep "GET /v1/flowable/process-api/history/historic-process-instances" access.log.*.gz | wc -l 
+
+GET /v1/flowable/process-api/history/historic-variable-instance
+
+
+zgrep "GET /v1/flowable/process-api/history/historic-variable-instance" access.log.*.gz | wc -l 

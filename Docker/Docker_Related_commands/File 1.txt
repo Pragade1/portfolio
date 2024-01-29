@@ -1,0 +1,13 @@
+docker system df  - command to check how much we can reclaim
+
+docker ps - list the container
+
+docker images- list the images
+
+docker sevice ps (servicename)- list the particular services
+
+docker stats | grep ms_flow - to check cpu level
+
+
+docker service scale ms_commandservice=0
+docker service scale ms_commandservice=2

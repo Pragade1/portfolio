@@ -1,0 +1,157 @@
+[msuser@tusass-prod-ms02 ~]$ c /home/msuser/swarm/
+[msuser@tusass-prod-ms02 ~]$ pwd
+/home/msuser
+[msuser@tusass-prod-ms02 ~]$ cd swarm/
+[msuser@tusass-prod-ms02 swarm]$ ls -ltr
+total 104
+-rw-rw-r--. 1 msuser msuser  733 Jan 20  2022 sec_serv.cer
+drwxr-xr-x. 2 msuser msuser   30 Jan 28  2022 config_scripts
+-rw-r--r--. 1 msuser msuser 1991 Feb  8  2022 dc_command_prod.yaml
+-rw-rw-r--. 1 msuser msuser 1932 Feb 28  2022 dc_query_prod_bkp.yaml
+-rw-rw-r--. 1 msuser msuser   29 Apr 21  2022 index.html
+-rw-r--r--. 1 msuser msuser 4350 Jul  7  2022 log4j2-prod.xml
+-rw-r--r--. 1 msuser msuser 2176 May 17 04:07 dc_address_prod.yaml
+-rw-r--r--. 1 msuser msuser 2084 Jun 13 03:37 dc_sync_prod.yaml
+-rw-r--r--. 1 msuser msuser 2028 Jul 18 04:03 dc_unwire_prod.yaml
+-rw-r--r--. 1 msuser msuser 2012 Aug  8 03:58 dc_apigw_prod.yaml
+-rw-r--r--. 1 msuser msuser 2163 Aug  8 04:02 dc_authentication_prod.yaml
+-rw-r--r--. 1 msuser msuser 1982 Aug  8 04:05 dc_balance_prod.yaml
+-rw-rw-r--. 1 msuser msuser 1862 Aug  8 04:09 dc_log_prod.yaml
+-rw-r--r--. 1 msuser msuser 2043 Aug  8 04:11 dc_finance_prod.yaml
+-rw-r--r--. 1 msuser msuser 2512 Aug 16 04:03 dc_mobile_prov_prod.yaml
+-rw-r--r--. 1 msuser msuser 2257 Aug 24 02:56 dc_cpr_prod.yaml
+-rw-rw-r--. 1 msuser msuser 1927 Aug 24 03:48 dc_query_prod.yaml
+-rw-r--r--. 1 msuser msuser 2002 Aug 24 03:53 dc_inventory_prod.yaml
+-rw-rw-r--. 1 msuser msuser 2005 Aug 24 04:51 dc_bridge_prod.yaml
+-rw-r--r--. 1 msuser msuser 2032 Aug 24 04:55 dc_dsl_prod.yaml
+-rw-r--r--. 1 msuser msuser 2035 Sep  4 03:52 dc_operation_prod.yaml
+drwxrwxr-x. 2 msuser msuser   55 Sep  4 03:55 VoucherService
+-rw-rw-r--. 1 msuser msuser 1949 Sep  4 04:05 dc_uhd_prod.yaml
+-rw-rw-r--. 1 msuser msuser 2103 Sep  4 04:14 dc_sandvine_prod.yaml
+-rw-r--r--. 1 msuser msuser 2335 Sep  4 04:15 dc_voucher_prod.yaml
+-rw-r--r--. 1 msuser msuser 2153 Oct  4 03:40 dc_notif_prod.yaml
+-rw-r--r--. 1 msuser msuser 2158 Oct 19 04:08 dc_flowable_prod.yaml
+[msuser@tusass-prod-ms02 swarm]$ docker ps
++ docker ps
+CONTAINER ID   IMAGE                                                   COMMAND                  CREATED         STATUS                     PORTS                                                 NAMES
+43167a6cc599   harbor.tusass.gl/library/syncservice:21                 "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_syncservice.1.xfewxont9aztke0k7ammaje5v
+a5838fa4d598   harbor.tusass.gl/library/authenticationservice:34       "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_authenticationservice.1.510yw2jkynwiqb6d1dueuryxy
+adf05e11cfc6   harbor.tusass.gl/library/financeservice:7               "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_financeservice.1.rebliyhgrbeblfb7abi4eiwaa
+4f3b0328b907   harbor.tusass.gl/library/voucherservice:13              "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_voucherservice.1.z2omcsti0s3bgcu3idvkshugk
+32a84673f393   harbor.tusass.gl/library/inventoryservice:35            "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_inventoryservice.2.tlbm9g3yegikop3ya5zj1s924
+e49bc56c04fd   harbor.tusass.gl/library/operationservice:182           "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_operationservice.1.05xh32646sj7bozo43kap551l
+ee257875054c   harbor.tusass.gl/library/uhdservice:31                  "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_uhdservice.1.evfhwuvvtuqdheboq7krrcjes
+a5dbe366b238   harbor.tusass.gl/library/mobileprovisioningservice:45   "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_mobileprovisioningservice.1.gksm9z5rzzuv7fhi14ma2a65a
+09df0ad3067c   harbor.tusass.gl/library/logservice:25                  "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_logservice.1.94qfhfxid2uqahpi6knwvjs5q
+624f532b5e07   harbor.tusass.gl/library/notifservice:40                "java org.springfram…"   17 hours ago    Up 17 hours                                                                      ms_notifservice.1.32aczij3pi339otuktn98xesx
+7c604f0d50fb   harbor.tusass.gl/library/notifservice:40                "java org.springfram…"   2 weeks ago     Up 2 weeks                                                                       ms_notifservice.2.5hy3nstf0oyyvxwq0p9y27d85
+9c10e517f9a7   harbor.tusass.gl/library/voucherservice:13              "java org.springfram…"   6 weeks ago     Up 6 weeks                                                                       ms_voucherservice.2.lpxpat4njb5zhzpswvgez26cj
+0803f92b2b08   harbor.tusass.gl/library/uhdservice:31                  "java org.springfram…"   6 weeks ago     Up 6 weeks                                                                       ms_uhdservice.2.erqcaiteun2u0yjyue4inb506
+7449eada87af   harbor.tusass.gl/library/operationservice:182           "java org.springfram…"   6 weeks ago     Up 6 weeks                                                                       ms_operationservice.2.ssparw0g162ity5mgx8l65fwo
+fd043d4c9e1e   harbor.tusass.gl/library/inventoryservice:35            "java org.springfram…"   8 weeks ago     Up 8 weeks                                                                       ms_inventoryservice.1.k7sbsd1s8mrtp8kp0qibunevo
+17091ea79629   harbor.tusass.gl/library/queryservice:50                "java -jar ./app.jar…"   8 weeks ago     Up 8 weeks                                                                       ms_queryservice.4.2mb8fb1gyieivax2fnw0z48bt
+67f68874c819   harbor.tusass.gl/library/mobileprovisioningservice:45   "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_mobileprovisioningservice.2.pwp0s3c3epnvugu581vcnt0ll
+34b4e188b917   harbor.tusass.gl/library/financeservice:7               "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_financeservice.2.51s874vlhxu026u83x71w9krk
+368e0d16d2a0   harbor.tusass.gl/library/logservice:25                  "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_logservice.2.yik25f5qgxw3rew3rhmifth5l
+8521dda5bd8d   harbor.tusass.gl/library/balanceservice:29              "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_balanceservice.1.ccn3ft8cnxqtxwrv24qcnbuka
+38ed5bcd6ef2   harbor.tusass.gl/library/authenticationservice:34       "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_authenticationservice.2.ecr5802ogere6hwn5zdwoaxcm
+615f30149f62   harbor.tusass.gl/library/apigateway:18                  "java org.springfram…"   2 months ago    Up 2 months                                                                      ms_apigateway.2.853jvfouywye8zxhxol3mpes3
+92ce1a0d0ae9   harbor.tusass.gl/library/unwireservice:27               "java org.springfram…"   3 months ago    Up 3 months                                                                      ms_unwireservice.4.cv01sjpihsw79ppijqh5gm44b
+f772ff91682d   harbor.tusass.gl/library/syncservice:21                 "java org.springfram…"   3 months ago    Up 3 months                                                                      ms_syncservice.2.xsv9bl3blg4r016hoctwlmivc
+48f6a81ce0f2   ghcr.io/openzipkin/zipkin:latest                        "start-zipkin"           19 months ago   Up 19 months (unhealthy)   9410/tcp, 0.0.0.0:9411->9411/tcp, :::9411->9411/tcp   zipkin
+5fbd8628947c   ghcr.io/openzipkin/zipkin-dependencies                  "crond -f"               22 months ago   Up 22 months                                                                     dependencies
+12262fb79501   portainer/portainer-ce:latest                           "/portainer -H tcp:/…"   22 months ago   Up 22 months               8000/tcp, 9000/tcp, 9443/tcp                          portainer_portainer.1.ulvo3lmyqxq1706s3ozjjszpk
+1dbef874a487   portainer/agent:latest                                  "./agent"                22 months ago   Up 22 months                                                                     portainer_agent.uvvoe868fb0actgfxzbltzvf0.x4eyjit843v2f0epah2c5z1xf
+[msuser@tusass-prod-ms02 swarm]$ docker service ls
++ docker service ls
+ID             NAME                           MODE         REPLICAS   IMAGE                                                   PORTS
+tsqi8yr3rcll   ms_addressservice              replicated   2/2        harbor.tusass.gl/library/addressservice:32              *:8098->8098/tcp, *:9098->9098/tcp
+tsd0sdk7rd14   ms_apigateway                  replicated   4/4        harbor.tusass.gl/library/apigateway:18                  *:7080->7080/tcp, *:8070->8070/tcp
+fp4chjxp5mqf   ms_authenticationservice       replicated   2/2        harbor.tusass.gl/library/authenticationservice:34       *:8088->8088/tcp, *:9088->9088/tcp
+ocyzolj1lerj   ms_balanceservice              replicated   6/6        harbor.tusass.gl/library/balanceservice:29              *:8082->8082/tcp, *:9082->9082/tcp
+sx4fc1v9ytxp   ms_bridgeserverservice         replicated   2/2        harbor.tusass.gl/library/bridgeserverservice:13         *:8097->8097/tcp, *:9097->9097/tcp
+wlxlofapme7v   ms_commandservice              replicated   2/2        harbor.tusass.gl/library/commandservice:36              *:8085->8085/tcp, *:9085->9085/tcp
+xzflkpunkbhu   ms_cprservice                  replicated   2/2        harbor.tusass.gl/library/cprservice:20                  *:8084->8084/tcp, *:9084->9084/tcp
+z87iiggapm65   ms_dslservice                  replicated   2/2        harbor.tusass.gl/library/dslservice:26                  *:8092->8092/tcp, *:9092->9092/tcp
+ydqti8mmbxjb   ms_financeservice              replicated   2/2        harbor.tusass.gl/library/financeservice:7               *:8096->8096/tcp, *:9096->9096/tcp
+wg70l0713jzj   ms_inventoryservice            replicated   2/2        harbor.tusass.gl/library/inventoryservice:35            *:8091->8091/tcp, *:9091->9091/tcp
+5rr56c7b9fg8   ms_logservice                  replicated   2/2        harbor.tusass.gl/library/logservice:25                  *:8095->8095/tcp, *:9095->9095/tcp
+hwrdgjc0k3bz   ms_lookupservice               replicated   3/3        harbor.tusass.gl/library/lookupservice:30               *:8083->8083/tcp, *:9083->9083/tcp
+wl0n6vix1j9g   ms_mobileprovisioningservice   replicated   2/2        harbor.tusass.gl/library/mobileprovisioningservice:45   *:8102->8102/tcp, *:9102->9102/tcp
+38dkyqxwsunm   ms_notifservice                replicated   2/2        harbor.tusass.gl/library/notifservice:40                *:2025->2025/tcp, *:5218->5218/tcp, *:8087->8087/tcp, *:9087->9087/tcp
+3gvvejr2brad   ms_operationservice            replicated   2/2        harbor.tusass.gl/library/operationservice:182           *:8089->8089/tcp, *:9089->9089/tcp
+vr31vtba39pp   ms_queryservice                replicated   4/4        harbor.tusass.gl/library/queryservice:50                *:8081->8081/tcp, *:9081->9081/tcp
+vkquvmb8yznk   ms_sandvineservice             replicated   2/2        harbor.tusass.gl/library/sandvineservice:69             *:8104->8104/tcp, *:9104->9104/tcp
+mvtcvy9bosu3   ms_syncservice                 replicated   2/2        harbor.tusass.gl/library/syncservice:21                 *:8093->8093/tcp, *:9093->9093/tcp
+oe8jdggccrc8   ms_uhdservice                  replicated   2/2        harbor.tusass.gl/library/uhdservice:31                  *:8094->8094/tcp, *:9094->9094/tcp
+3i54n09cmy89   ms_unwireservice               replicated   4/4        harbor.tusass.gl/library/unwireservice:27               *:8090->8090/tcp, *:9090->9090/tcp
+mu5h5vmogg86   ms_voucherservice              replicated   2/2        harbor.tusass.gl/library/voucherservice:13              *:8099->8099/tcp, *:9099->9099/tcp
+b790phxveutx   portainer_agent                global       6/6        portainer/agent:latest
+kfngvocg1y9g   portainer_portainer            replicated   1/1        portainer/portainer-ce:latest                           *:8000->8000/tcp, *:9000->9000/tcp
+[msuser@tusass-prod-ms02 swarm]$ docker service ps ms_addressservice
++ docker service ps ms_addressservice
+ID             NAME                      IMAGE                                        NODE               DESIRED STATE   CURRENT STATE           ERROR                         PORTS
+rrfyofznfkla   ms_addressservice.1       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms04   Running         Running 8 weeks ago
+k0eaif6mpzfr    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Shutdown 5 months ago
+u095l2c7lth4    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Failed 5 months ago     "task: non-zero exit (143)"
+rzc5wufhgcq7   ms_addressservice.2       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms03   Running         Running 8 weeks ago
+ij7dpq09gsq0    \_ ms_addressservice.2   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms04   Shutdown        Shutdown 5 months ago
+[msuser@tusass-prod-ms02 swarm]$ history | grep scale
+   45  docker service scale ms_sandvineservice=0
+   46  docker service scale ms_sandvineservice=2
+   47  docker service scale ms_sandvineservice=0
+   48  docker service scale ms_sandvineservice=2
+   58  docker service scale ms_addressservice=0
+   59  docker service scale ms_addressservice=2
+   60  history | grep scale
+  217  docker scale ms_lookupservice=1
+  218  docker service scale ms_lookupservice=1
+  219  docker service scale ms_lookupservice=0
+  220  docker service scale ms_lookupservice=2
+  222  history | grep scale
+  286  docker service scale ms_addressservice=0
+  287  docker service scale ms_addressservice=2
+  716  history | grep scale
+  718  docker service scale ms_queryservice=0
+  719  docker service scale ms_queryservice=4
+  776  history | grep scale
+  777  docker service scale ms_addressservice=0
+  778  docker service scale ms_addressservice=2
+ 1009  history | grep scale
+[msuser@tusass-prod-ms02 swarm]$ docker service scale ms_addressservice=0
++ docker service scale ms_addressservice=0
+ms_addressservice scaled to 0
+overall progress: 0 out of 0 tasks
+verify: Service converged
+[msuser@tusass-prod-ms02 swarm]$ docker service scale ms_addressservice=2
++ docker service scale ms_addressservice=2
+ms_addressservice scaled to 2
+overall progress: 2 out of 2 tasks
+1/2: running   [==================================================>]
+2/2: running   [==================================================>]
+verify: Service converged
+[msuser@tusass-prod-ms02 swarm]$ docker service ps ms_addressservice
++ docker service ps ms_addressservice
+ID             NAME                      IMAGE                                        NODE               DESIRED STATE   CURRENT STATE            ERROR                         PORTS
+t3rlqrxnmx7r   ms_addressservice.1       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms03   Running         Running 36 seconds ago
+k0eaif6mpzfr    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Shutdown 5 months ago
+u095l2c7lth4    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Failed 5 months ago      "task: non-zero exit (143)"
+1mtcicrz8fc5   ms_addressservice.2       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms04   Running         Running 36 seconds ago
+ij7dpq09gsq0    \_ ms_addressservice.2   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms04   Shutdown        Shutdown 5 months ago
+[msuser@tusass-prod-ms02 swarm]$ docker service ps ms_addressservice
++ docker service ps ms_addressservice
+ID             NAME                      IMAGE                                        NODE               DESIRED STATE   CURRENT STATE           ERROR                         PORTS
+t3rlqrxnmx7r   ms_addressservice.1       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms03   Running         Running 4 minutes ago
+k0eaif6mpzfr    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Shutdown 5 months ago
+u095l2c7lth4    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Failed 5 months ago     "task: non-zero exit (143)"
+1mtcicrz8fc5   ms_addressservice.2       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms04   Running         Running 4 minutes ago
+ij7dpq09gsq0    \_ ms_addressservice.2   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms04   Shutdown        Shutdown 5 months ago
+[msuser@tusass-prod-ms02 swarm]$ docker service ps ms_addressservice
++ docker service ps ms_addressservice
+ID             NAME                      IMAGE                                        NODE               DESIRED STATE   CURRENT STATE           ERROR                         PORTS
+t3rlqrxnmx7r   ms_addressservice.1       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms03   Running         Running 7 minutes ago
+k0eaif6mpzfr    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Shutdown 5 months ago
+u095l2c7lth4    \_ ms_addressservice.1   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms03   Shutdown        Failed 5 months ago     "task: non-zero exit (143)"
+1mtcicrz8fc5   ms_addressservice.2       harbor.tusass.gl/library/addressservice:32   tusass-prod-ms04   Running         Running 7 minutes ago
+ij7dpq09gsq0    \_ ms_addressservice.2   harbor.tusass.gl/library/addressservice:29   tusass-prod-ms04   Shutdown        Shutdown 5 months ago
+[msuser@tusass-prod-ms02 swarm]$
